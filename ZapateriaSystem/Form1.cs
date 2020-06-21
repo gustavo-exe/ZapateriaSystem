@@ -7,7 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZapateriaSystem.Cliente;
 using ZapateriaSystem.Empleado;
+using ZapateriaSystem.Producto_General;
+using ZapateriaSystem.Proveedor;
 using ZapateriaSystem.Venta;
 
 
@@ -87,6 +90,81 @@ namespace ZapateriaSystem
         private void VisualizarVentaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Viw_Venta ventana = new Viw_Venta();
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
+
+        private void perfilesDeInstaramToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void insertarToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            Ins_Cliente ventana = new Ins_Cliente();
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
+
+        private void actulizarClienteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Act_Cliente ventana = new Act_Cliente();
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
+
+        private void verClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ver_Datos_Cliente ventana = new Ver_Datos_Cliente();
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
+
+        private void datosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ver_PerfilInstagram ventana = new Ver_PerfilInstagram();
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
+
+        private void insertarProductoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Ins_ProductoGeneral ventana = new Ins_ProductoGeneral();
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
+
+        private void actulizarProductoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Act_ProductoGeneral ventana = new Act_ProductoGeneral();
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
+
+        private void listaProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            View_ProductoGeneral ventana = new View_ProductoGeneral();
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
+
+        private void insertarProveedorToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Ins_Proveedor ventana = new Ins_Proveedor();
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
+
+        private void actulizarProveedorToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Act_Proveedor ventana = new Act_Proveedor();
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
+
+        private void listaProveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ViewProveedor ventana = new ViewProveedor();
             ventana.MdiParent = this;
             ventana.Show();
         }
