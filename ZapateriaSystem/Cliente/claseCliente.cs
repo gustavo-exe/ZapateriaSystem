@@ -19,9 +19,7 @@ namespace ZapateriaSystem.Cliente
         private string perfilInstagram;
         private DateTime cumpleaniosCliente;
         private string ciudadCliente;
-        private string tonodeBaseCliente;
-        private string tonodePolvoCliente;
-        private string tipodeCutieCliente;
+      
         private MySqlException error;
 
         public claseCliente() 
@@ -33,13 +31,11 @@ namespace ZapateriaSystem.Cliente
             perfilInstagram = "";
             cumpleaniosCliente = DateTime.Today;
             ciudadCliente = "";
-            tonodeBaseCliente = "";
-            tonodePolvoCliente = "";
-            tipodeCutieCliente = "";
+
             conexion = new Conexion();
         }
         
-        public claseCliente(string i, string n, string c, string te, string pf, DateTime cum, string ci, string tb, string tp, string tc)
+        public claseCliente(string i, string n, string c, string te, string pf, DateTime cum, string ci)
         {
             idCliente = i;
             nombreCliente = n;
@@ -48,15 +44,13 @@ namespace ZapateriaSystem.Cliente
             perfilInstagram = pf;
             cumpleaniosCliente = cum;
             ciudadCliente = ci;
-            tonodeBaseCliente = tb;
-            tonodePolvoCliente = tp;
-            tipodeCutieCliente = tc;
+         
             conexion = new Conexion();
         }
 
         public Boolean Guardar()
         {
-            if (conexion.IUD(string.Format("INSERT INTO cliente (IdCliente, Nombre, Correo, Telefono, PerfilInstagram, Cumpleaños, Ciudad, TonoDeBase, TonoDePolvo, TipoDeCuties) VALUES ('{0}','{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}')", idCliente, nombreCliente, correoCliente, telefonoCliente, perfilInstagram, cumpleaniosCliente.ToString("yyyy-MM-dd"), ciudadCliente, tonodeBaseCliente,tonodePolvoCliente, tipodeCutieCliente)))
+            if (conexion.IUD(string.Format("INSERT INTO cliente (IdCliente, Nombre, Correo, Telefono, PerfilInstagram, Cumpleaños, Ciudad) VALUES ('{0}','{1}', '{2}', '{3}', '{4}', '{5}', '{6}')", idCliente, nombreCliente, correoCliente, telefonoCliente, perfilInstagram, cumpleaniosCliente.ToString("yyyy-MM-dd"), ciudadCliente)))
             {
                 return true;
             }
@@ -98,9 +92,6 @@ namespace ZapateriaSystem.Cliente
                 cliente.perfilInstagram = t1.Rows[0][4].ToString();
                 cliente.cumpleaniosCliente = Convert.ToDateTime(t1.Rows[0][5].ToString());
                 cliente.ciudadCliente = t1.Rows[0][6].ToString();
-                cliente.tonodeBaseCliente = t1.Rows[0][7].ToString();
-                cliente.tonodePolvoCliente = t1.Rows[0][8].ToString();
-                cliente.tipodeCutieCliente = t1.Rows[0][9].ToString();
             }
             return cliente;
 
@@ -118,17 +109,14 @@ namespace ZapateriaSystem.Cliente
                                             "Telefono='{2}'," +
                                             "PerfilInstagram='{3}', " +
                                             "Cumpleaños='{4}', " +
-                                            "Ciudad='{5}' ," +
-                                            "TonoDeBase='{6}', " +
-                                            "TonoDePolvo='{7}', " +
-                                            "TipoDeCuties='{8}' " +
-                                            "WHERE IdCliente='{9}'",
-                                            cliente.NombreCliente, cliente.CorreoCliente, cliente.TelefonoCliente, cliente.PerfilInstagram, cliente.CumpleanosCliente.ToString("yyyy-MM-dd"), cliente.CiudadCliente,
-                                            cliente.TonoDeBaseCliente, cliente.TonodePolvoCliente, cliente.TipodeCutie, cliente.IdCliente)))
+                                            "Ciudad='{5}'" +
+                                            "WHERE IdCliente='{6}';",
+                                            cliente.NombreCliente, cliente.CorreoCliente, cliente.TelefonoCliente, cliente.PerfilInstagram, cliente.CumpleanosCliente.ToString("yyyy-MM-dd"), cliente.CiudadCliente, cliente.IdCliente)))
             {
                 MessageBox.Show("Se actulizaron los datos de: " + Convert.ToString(id));
             }
         }
+
         public void Eliminar(claseCliente cliente)
         {
             string id;
@@ -225,42 +213,6 @@ namespace ZapateriaSystem.Cliente
             set
             {
                 ciudadCliente = value;
-            }
-        }
-
-        public string TonoDeBaseCliente
-        {
-            get
-            {
-                return tonodeBaseCliente;
-            }
-            set
-            {
-                tonodeBaseCliente = value;
-            }
-        }
-
-        public string TonodePolvoCliente
-        {
-            get
-            {
-                return tonodePolvoCliente;
-            }
-            set
-            {
-                tonodePolvoCliente = value;
-            }
-        }
-
-        public string TipodeCutie
-        {
-            get
-            {
-                return tipodeCutieCliente;
-            }
-            set
-            {
-                tipodeCutieCliente = value;
             }
         }
 

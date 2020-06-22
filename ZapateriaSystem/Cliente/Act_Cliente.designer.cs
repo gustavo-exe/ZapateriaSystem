@@ -35,19 +35,10 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dateFechaCumpleaños = new System.Windows.Forms.DateTimePicker();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.txtPolvo = new System.Windows.Forms.TextBox();
             this.txtCiudad = new System.Windows.Forms.TextBox();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.txtBase = new System.Windows.Forms.TextBox();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.txtCutie = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
@@ -65,10 +56,10 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.ListaClientes = new System.Windows.Forms.ListBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnInsertar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnRGuardar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -168,19 +159,10 @@
             // 
             this.panel2.AutoSize = true;
             this.panel2.Controls.Add(this.dateFechaCumpleaños);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.panel10);
-            this.panel2.Controls.Add(this.txtPolvo);
             this.panel2.Controls.Add(this.txtCiudad);
-            this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.panel12);
-            this.panel2.Controls.Add(this.txtBase);
-            this.panel2.Controls.Add(this.panel13);
-            this.panel2.Controls.Add(this.txtCutie);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.txtTelefono);
@@ -205,47 +187,11 @@
             // 
             // dateFechaCumpleaños
             // 
-            this.dateFechaCumpleaños.Location = new System.Drawing.Point(446, 184);
+            this.dateFechaCumpleaños.Location = new System.Drawing.Point(417, 214);
             this.dateFechaCumpleaños.Margin = new System.Windows.Forms.Padding(2);
             this.dateFechaCumpleaños.Name = "dateFechaCumpleaños";
-            this.dateFechaCumpleaños.Size = new System.Drawing.Size(182, 20);
+            this.dateFechaCumpleaños.Size = new System.Drawing.Size(215, 20);
             this.dateFechaCumpleaños.TabIndex = 6;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Black;
-            this.label11.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(291, 292);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(123, 22);
-            this.label11.TabIndex = 59;
-            this.label11.Text = "Tipo de Cutie";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Black;
-            this.label10.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(291, 266);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(132, 22);
-            this.label10.TabIndex = 58;
-            this.label10.Text = "Tono de Polvo";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Black;
-            this.label9.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(291, 237);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(128, 22);
-            this.label9.TabIndex = 57;
-            this.label9.Text = "Tono de Base";
             // 
             // label8
             // 
@@ -253,7 +199,7 @@
             this.label8.BackColor = System.Drawing.Color.Black;
             this.label8.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(291, 208);
+            this.label8.Location = new System.Drawing.Point(286, 240);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 22);
             this.label8.TabIndex = 56;
@@ -265,32 +211,11 @@
             this.label7.BackColor = System.Drawing.Color.Black;
             this.label7.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(291, 175);
+            this.label7.Location = new System.Drawing.Point(286, 207);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(117, 22);
             this.label7.TabIndex = 55;
             this.label7.Text = "Cumpleaños";
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Location = new System.Drawing.Point(446, 288);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(163, 1);
-            this.panel10.TabIndex = 54;
-            // 
-            // txtPolvo
-            // 
-            this.txtPolvo.BackColor = System.Drawing.Color.Black;
-            this.txtPolvo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPolvo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPolvo.ForeColor = System.Drawing.Color.White;
-            this.txtPolvo.Location = new System.Drawing.Point(446, 262);
-            this.txtPolvo.Margin = new System.Windows.Forms.Padding(0);
-            this.txtPolvo.Name = "txtPolvo";
-            this.txtPolvo.Size = new System.Drawing.Size(167, 22);
-            this.txtPolvo.TabIndex = 9;
-            this.txtPolvo.Tag = "";
             // 
             // txtCiudad
             // 
@@ -298,62 +223,20 @@
             this.txtCiudad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCiudad.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCiudad.ForeColor = System.Drawing.Color.White;
-            this.txtCiudad.Location = new System.Drawing.Point(446, 204);
+            this.txtCiudad.Location = new System.Drawing.Point(441, 236);
             this.txtCiudad.Margin = new System.Windows.Forms.Padding(0);
             this.txtCiudad.Name = "txtCiudad";
             this.txtCiudad.Size = new System.Drawing.Size(167, 22);
             this.txtCiudad.TabIndex = 7;
             this.txtCiudad.Tag = "";
             // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.White;
-            this.panel11.Location = new System.Drawing.Point(446, 258);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(163, 1);
-            this.panel11.TabIndex = 51;
-            // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.White;
-            this.panel12.Location = new System.Drawing.Point(446, 229);
+            this.panel12.Location = new System.Drawing.Point(441, 261);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(163, 1);
             this.panel12.TabIndex = 50;
-            // 
-            // txtBase
-            // 
-            this.txtBase.BackColor = System.Drawing.Color.Black;
-            this.txtBase.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBase.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBase.ForeColor = System.Drawing.Color.White;
-            this.txtBase.Location = new System.Drawing.Point(446, 234);
-            this.txtBase.Margin = new System.Windows.Forms.Padding(0);
-            this.txtBase.Name = "txtBase";
-            this.txtBase.Size = new System.Drawing.Size(167, 22);
-            this.txtBase.TabIndex = 8;
-            this.txtBase.Tag = "";
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.White;
-            this.panel13.Location = new System.Drawing.Point(446, 318);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(163, 1);
-            this.panel13.TabIndex = 48;
-            // 
-            // txtCutie
-            // 
-            this.txtCutie.BackColor = System.Drawing.Color.Black;
-            this.txtCutie.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCutie.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCutie.ForeColor = System.Drawing.Color.White;
-            this.txtCutie.Location = new System.Drawing.Point(446, 292);
-            this.txtCutie.Margin = new System.Windows.Forms.Padding(0);
-            this.txtCutie.Name = "txtCutie";
-            this.txtCutie.Size = new System.Drawing.Size(167, 22);
-            this.txtCutie.TabIndex = 10;
-            this.txtCutie.Tag = "";
             // 
             // label6
             // 
@@ -361,7 +244,7 @@
             this.label6.BackColor = System.Drawing.Color.Black;
             this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(291, 145);
+            this.label6.Location = new System.Drawing.Point(286, 177);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(143, 22);
             this.label6.TabIndex = 46;
@@ -373,7 +256,7 @@
             this.label5.BackColor = System.Drawing.Color.Black;
             this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(291, 116);
+            this.label5.Location = new System.Drawing.Point(286, 148);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 22);
             this.label5.TabIndex = 45;
@@ -385,7 +268,7 @@
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefono.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.Color.White;
-            this.txtTelefono.Location = new System.Drawing.Point(446, 112);
+            this.txtTelefono.Location = new System.Drawing.Point(441, 144);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(0);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(167, 22);
@@ -395,7 +278,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(446, 167);
+            this.panel8.Location = new System.Drawing.Point(441, 199);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(163, 1);
             this.panel8.TabIndex = 43;
@@ -403,7 +286,7 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Location = new System.Drawing.Point(446, 137);
+            this.panel9.Location = new System.Drawing.Point(441, 169);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(163, 1);
             this.panel9.TabIndex = 42;
@@ -414,7 +297,7 @@
             this.txtPerfil.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPerfil.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPerfil.ForeColor = System.Drawing.Color.White;
-            this.txtPerfil.Location = new System.Drawing.Point(446, 142);
+            this.txtPerfil.Location = new System.Drawing.Point(441, 174);
             this.txtPerfil.Margin = new System.Windows.Forms.Padding(0);
             this.txtPerfil.Name = "txtPerfil";
             this.txtPerfil.Size = new System.Drawing.Size(167, 22);
@@ -427,7 +310,7 @@
             this.label4.BackColor = System.Drawing.Color.Black;
             this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(291, 87);
+            this.label4.Location = new System.Drawing.Point(286, 119);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 22);
             this.label4.TabIndex = 40;
@@ -439,7 +322,7 @@
             this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(291, 58);
+            this.label3.Location = new System.Drawing.Point(286, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 22);
             this.label3.TabIndex = 39;
@@ -451,16 +334,16 @@
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(291, 28);
+            this.label2.Location = new System.Drawing.Point(286, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 22);
+            this.label2.Size = new System.Drawing.Size(89, 22);
             this.label2.TabIndex = 38;
-            this.label2.Text = "IdCliente";
+            this.label2.Text = "Identidad";
             // 
             // panelColor3
             // 
             this.panelColor3.BackColor = System.Drawing.Color.White;
-            this.panelColor3.Location = new System.Drawing.Point(446, 108);
+            this.panelColor3.Location = new System.Drawing.Point(441, 140);
             this.panelColor3.Name = "panelColor3";
             this.panelColor3.Size = new System.Drawing.Size(163, 1);
             this.panelColor3.TabIndex = 37;
@@ -471,7 +354,7 @@
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCorreo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ForeColor = System.Drawing.Color.White;
-            this.txtCorreo.Location = new System.Drawing.Point(446, 83);
+            this.txtCorreo.Location = new System.Drawing.Point(441, 115);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(0);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(167, 22);
@@ -485,7 +368,7 @@
             this.txtcliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtcliente.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcliente.ForeColor = System.Drawing.Color.White;
-            this.txtcliente.Location = new System.Drawing.Point(446, 24);
+            this.txtcliente.Location = new System.Drawing.Point(441, 56);
             this.txtcliente.Margin = new System.Windows.Forms.Padding(0);
             this.txtcliente.Name = "txtcliente";
             this.txtcliente.Size = new System.Drawing.Size(167, 22);
@@ -495,7 +378,7 @@
             // panelColor2
             // 
             this.panelColor2.BackColor = System.Drawing.Color.White;
-            this.panelColor2.Location = new System.Drawing.Point(446, 79);
+            this.panelColor2.Location = new System.Drawing.Point(441, 111);
             this.panelColor2.Name = "panelColor2";
             this.panelColor2.Size = new System.Drawing.Size(163, 1);
             this.panelColor2.TabIndex = 34;
@@ -503,7 +386,7 @@
             // PanelColor1
             // 
             this.PanelColor1.BackColor = System.Drawing.Color.White;
-            this.PanelColor1.Location = new System.Drawing.Point(446, 50);
+            this.PanelColor1.Location = new System.Drawing.Point(441, 82);
             this.PanelColor1.Name = "PanelColor1";
             this.PanelColor1.Size = new System.Drawing.Size(163, 1);
             this.PanelColor1.TabIndex = 33;
@@ -514,7 +397,7 @@
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.White;
-            this.txtNombre.Location = new System.Drawing.Point(446, 54);
+            this.txtNombre.Location = new System.Drawing.Point(441, 86);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(0);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(167, 22);
@@ -539,66 +422,15 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btnGuardar);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.btnInsertar);
             this.panel3.Controls.Add(this.btnEliminar);
+            this.panel3.Controls.Add(this.btnModificar);
+            this.panel3.Controls.Add(this.btnCancelar);
+            this.panel3.Controls.Add(this.btnRGuardar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(42, 396);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(632, 51);
             this.panel3.TabIndex = 2;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.Black;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(123, 11);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(140, 34);
-            this.btnGuardar.TabIndex = 0;
-            this.btnGuardar.Text = "E l i m i  n a r";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button2.Location = new System.Drawing.Point(371, 11);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 34);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "M o d i f i c a r ";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnInsertar
-            // 
-            this.btnInsertar.BackColor = System.Drawing.Color.Black;
-            this.btnInsertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInsertar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertar.ForeColor = System.Drawing.Color.White;
-            this.btnInsertar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnInsertar.Location = new System.Drawing.Point(371, 11);
-            this.btnInsertar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(141, 34);
-            this.btnInsertar.TabIndex = 15;
-            this.btnInsertar.Text = "C a n c e l a r";
-            this.btnInsertar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnInsertar.UseVisualStyleBackColor = false;
-            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // btnEliminar
             // 
@@ -611,11 +443,62 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(0);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(140, 34);
-            this.btnEliminar.TabIndex = 14;
-            this.btnEliminar.Text = "G u a r d a r";
+            this.btnEliminar.TabIndex = 0;
+            this.btnEliminar.Text = "E l i m i  n a r";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.btnEliminar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.Black;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnModificar.Location = new System.Drawing.Point(371, 11);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(141, 34);
+            this.btnModificar.TabIndex = 1;
+            this.btnModificar.Text = "M o d i f i c a r ";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Black;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(371, 11);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(141, 34);
+            this.btnCancelar.TabIndex = 15;
+            this.btnCancelar.Text = "C a n c e l a r";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnInsertar_Click);
+            // 
+            // btnRGuardar
+            // 
+            this.btnRGuardar.BackColor = System.Drawing.Color.Black;
+            this.btnRGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRGuardar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnRGuardar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnRGuardar.Location = new System.Drawing.Point(123, 11);
+            this.btnRGuardar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRGuardar.Name = "btnRGuardar";
+            this.btnRGuardar.Size = new System.Drawing.Size(140, 34);
+            this.btnRGuardar.TabIndex = 14;
+            this.btnRGuardar.Text = "G u a r d a r";
+            this.btnRGuardar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnRGuardar.UseVisualStyleBackColor = false;
+            this.btnRGuardar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // panel4
             // 
@@ -699,15 +582,15 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnRGuardar;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.ListBox ListaClientes;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnInsertar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTelefono;
@@ -724,19 +607,10 @@
         private System.Windows.Forms.Panel PanelColor1;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.DateTimePicker dateFechaCumpleaños;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.TextBox txtPolvo;
         private System.Windows.Forms.TextBox txtCiudad;
-        private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.TextBox txtBase;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.TextBox txtCutie;
-        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

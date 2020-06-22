@@ -68,9 +68,7 @@ namespace ZapateriaSystem.Cliente
             txtPerfilInstagram.Text = cliente.PerfilInstagram;
             dateFechaCumpleaños.Value = cliente.CumpleanosCliente;
             txtCiudad.Text = cliente.CiudadCliente;
-            txtTonodeBase.Text = cliente.TonoDeBaseCliente;
-            txtTonodePolvo.Text = cliente.TonodePolvoCliente;
-            txtTipodeCutie.Text = cliente.TipodeCutie;
+            
 
             SendKeys.Send("{Tab}");
         }
@@ -86,9 +84,7 @@ namespace ZapateriaSystem.Cliente
                 cliente.PerfilInstagram = txtPerfilInstagram.Text;
                 cliente.CumpleanosCliente = dateFechaCumpleaños.Value;
                 cliente.CiudadCliente = txtCiudad.Text;
-                cliente.TonoDeBaseCliente = txtTonodeBase.Text;
-                cliente.TonodePolvoCliente = txtTonodePolvo.Text;
-                cliente.TipodeCutie = txtTipodeCutie.Text;
+               
                 if (cliente.Guardar())
                 {
                     MessageBox.Show("Registro guardado correctamente", "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -139,24 +135,6 @@ namespace ZapateriaSystem.Cliente
                 txtCiudad.Focus();
                 validar = false;
             }
-            else if (txtTonodeBase.Text == "")
-            {
-                MessageBox.Show("Escriba el tono de base del cliente", "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtTonodeBase.Focus();
-                validar = false;
-            }
-            else if (txtTonodePolvo.Text == "")
-            {
-                MessageBox.Show("Escriba el tono de polvo del cliente", "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtTonodePolvo.Focus();
-                validar = false;
-            }
-            else if (txtTipodeCutie.Text == "")
-            {
-                MessageBox.Show("Escriba el tipo de cutie del cliente", "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtTipodeCutie.Focus();
-                validar = false;
-            }
             else if (dateFechaCumpleaños.Value == DateTime.Now)
             {
                 MessageBox.Show("Escriba la fecha de nacimiento del cliente", "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -177,9 +155,6 @@ namespace ZapateriaSystem.Cliente
             txtTelefono.Text = "";
             txtPerfilInstagram.Text = "";
             txtCiudad.Text = "";
-            txtTonodeBase.Text = "";
-            txtTonodePolvo.Text = "";
-            txtTipodeCutie.Text = "";
             
         }
 

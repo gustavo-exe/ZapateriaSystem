@@ -180,12 +180,7 @@ namespace ZapateriaSystem.Proveedor
                 txtTelefonoContacto.Focus();
                 validar = false;
             }
-            else if (txtDescripcion.Text == "")
-            {
-                MessageBox.Show("Escriba la descripcion", "Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtDescripcion.Focus();
-                validar = false;
-            }
+            
             else
                 validar = true;
             return validar;

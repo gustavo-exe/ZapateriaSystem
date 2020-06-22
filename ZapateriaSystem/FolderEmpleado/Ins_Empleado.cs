@@ -102,7 +102,7 @@ namespace ZapateriaSystem.Empleado
                 }
                 else
                 {
-                    MessageBox.Show("Error al guardar >:v");
+                    MessageBox.Show("Error al guardar.");
                 }
             }
         }

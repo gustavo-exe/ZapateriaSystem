@@ -36,21 +36,12 @@
             this.btnInsertar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dateFechaCumpleaños = new System.Windows.Forms.DateTimePicker();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.txtTonodePolvo = new System.Windows.Forms.TextBox();
             this.txtCiudad = new System.Windows.Forms.TextBox();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.txtTonodeBase = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.txtTipodeCutie = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -135,21 +126,12 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.dateFechaCumpleaños);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.panel10);
-            this.panel2.Controls.Add(this.txtTonodePolvo);
             this.panel2.Controls.Add(this.txtCiudad);
-            this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.panel12);
-            this.panel2.Controls.Add(this.txtTonodeBase);
-            this.panel2.Controls.Add(this.panel5);
-            this.panel2.Controls.Add(this.txtTipodeCutie);
             this.panel2.Controls.Add(this.txtTelefono);
             this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.panel9);
@@ -178,42 +160,6 @@
             this.dateFechaCumpleaños.Size = new System.Drawing.Size(186, 20);
             this.dateFechaCumpleaños.TabIndex = 5;
             this.dateFechaCumpleaños.ValueChanged += new System.EventHandler(this.dateFechaCumpleaños_ValueChanged);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Black;
-            this.label11.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(317, 214);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(123, 22);
-            this.label11.TabIndex = 36;
-            this.label11.Text = "Tipo de Cutie";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Black;
-            this.label10.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(317, 171);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(132, 22);
-            this.label10.TabIndex = 35;
-            this.label10.Text = "Tono de Polvo";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Black;
-            this.label9.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(317, 128);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(128, 22);
-            this.label9.TabIndex = 34;
-            this.label9.Text = "Tono de Base";
             // 
             // label8
             // 
@@ -245,7 +191,7 @@
             this.label6.BackColor = System.Drawing.Color.Black;
             this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(-4, 213);
+            this.label6.Location = new System.Drawing.Point(7, 213);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(143, 22);
             this.label6.TabIndex = 31;
@@ -257,32 +203,11 @@
             this.label5.BackColor = System.Drawing.Color.Black;
             this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(3, 167);
+            this.label5.Location = new System.Drawing.Point(7, 168);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 22);
             this.label5.TabIndex = 30;
             this.label5.Text = "Teléfono";
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Location = new System.Drawing.Point(452, 187);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(163, 1);
-            this.panel10.TabIndex = 29;
-            // 
-            // txtTonodePolvo
-            // 
-            this.txtTonodePolvo.BackColor = System.Drawing.Color.Black;
-            this.txtTonodePolvo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTonodePolvo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTonodePolvo.ForeColor = System.Drawing.Color.White;
-            this.txtTonodePolvo.Location = new System.Drawing.Point(452, 162);
-            this.txtTonodePolvo.Margin = new System.Windows.Forms.Padding(0);
-            this.txtTonodePolvo.Name = "txtTonodePolvo";
-            this.txtTonodePolvo.Size = new System.Drawing.Size(167, 22);
-            this.txtTonodePolvo.TabIndex = 9;
-            this.txtTonodePolvo.Tag = "";
             // 
             // txtCiudad
             // 
@@ -297,14 +222,6 @@
             this.txtCiudad.TabIndex = 6;
             this.txtCiudad.Tag = "";
             // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.White;
-            this.panel11.Location = new System.Drawing.Point(452, 145);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(163, 1);
-            this.panel11.TabIndex = 26;
-            // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.White;
@@ -313,47 +230,13 @@
             this.panel12.Size = new System.Drawing.Size(163, 1);
             this.panel12.TabIndex = 25;
             // 
-            // txtTonodeBase
-            // 
-            this.txtTonodeBase.BackColor = System.Drawing.Color.Black;
-            this.txtTonodeBase.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTonodeBase.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTonodeBase.ForeColor = System.Drawing.Color.White;
-            this.txtTonodeBase.Location = new System.Drawing.Point(452, 120);
-            this.txtTonodeBase.Margin = new System.Windows.Forms.Padding(0);
-            this.txtTonodeBase.Name = "txtTonodeBase";
-            this.txtTonodeBase.Size = new System.Drawing.Size(167, 22);
-            this.txtTonodeBase.TabIndex = 7;
-            this.txtTonodeBase.Tag = "";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(452, 234);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(163, 1);
-            this.panel5.TabIndex = 23;
-            // 
-            // txtTipodeCutie
-            // 
-            this.txtTipodeCutie.BackColor = System.Drawing.Color.Black;
-            this.txtTipodeCutie.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTipodeCutie.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipodeCutie.ForeColor = System.Drawing.Color.White;
-            this.txtTipodeCutie.Location = new System.Drawing.Point(452, 209);
-            this.txtTipodeCutie.Margin = new System.Windows.Forms.Padding(0);
-            this.txtTipodeCutie.Name = "txtTipodeCutie";
-            this.txtTipodeCutie.Size = new System.Drawing.Size(167, 22);
-            this.txtTipodeCutie.TabIndex = 10;
-            this.txtTipodeCutie.Tag = "";
-            // 
             // txtTelefono
             // 
             this.txtTelefono.BackColor = System.Drawing.Color.Black;
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefono.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.Color.White;
-            this.txtTelefono.Location = new System.Drawing.Point(140, 161);
+            this.txtTelefono.Location = new System.Drawing.Point(148, 164);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(0);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(167, 22);
@@ -363,7 +246,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(140, 232);
+            this.panel8.Location = new System.Drawing.Point(148, 235);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(163, 1);
             this.panel8.TabIndex = 20;
@@ -371,7 +254,7 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Location = new System.Drawing.Point(140, 186);
+            this.panel9.Location = new System.Drawing.Point(148, 189);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(163, 1);
             this.panel9.TabIndex = 19;
@@ -382,7 +265,7 @@
             this.txtPerfilInstagram.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPerfilInstagram.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPerfilInstagram.ForeColor = System.Drawing.Color.White;
-            this.txtPerfilInstagram.Location = new System.Drawing.Point(140, 208);
+            this.txtPerfilInstagram.Location = new System.Drawing.Point(148, 211);
             this.txtPerfilInstagram.Margin = new System.Windows.Forms.Padding(0);
             this.txtPerfilInstagram.Name = "txtPerfilInstagram";
             this.txtPerfilInstagram.Size = new System.Drawing.Size(167, 22);
@@ -395,7 +278,7 @@
             this.label4.BackColor = System.Drawing.Color.Black;
             this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 124);
+            this.label4.Location = new System.Drawing.Point(7, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 22);
             this.label4.TabIndex = 17;
@@ -407,7 +290,7 @@
             this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 76);
+            this.label3.Location = new System.Drawing.Point(7, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 22);
             this.label3.TabIndex = 16;
@@ -419,7 +302,7 @@
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(2, 34);
+            this.label2.Location = new System.Drawing.Point(7, 31);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 22);
             this.label2.TabIndex = 15;
@@ -428,7 +311,7 @@
             // panelColor3
             // 
             this.panelColor3.BackColor = System.Drawing.Color.White;
-            this.panelColor3.Location = new System.Drawing.Point(140, 144);
+            this.panelColor3.Location = new System.Drawing.Point(148, 147);
             this.panelColor3.Name = "panelColor3";
             this.panelColor3.Size = new System.Drawing.Size(163, 1);
             this.panelColor3.TabIndex = 14;
@@ -439,7 +322,7 @@
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCorreo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ForeColor = System.Drawing.Color.White;
-            this.txtCorreo.Location = new System.Drawing.Point(140, 119);
+            this.txtCorreo.Location = new System.Drawing.Point(148, 122);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(0);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(167, 22);
@@ -452,7 +335,7 @@
             this.txtCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCliente.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCliente.ForeColor = System.Drawing.Color.White;
-            this.txtCliente.Location = new System.Drawing.Point(140, 28);
+            this.txtCliente.Location = new System.Drawing.Point(148, 31);
             this.txtCliente.Margin = new System.Windows.Forms.Padding(0);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(167, 22);
@@ -462,7 +345,7 @@
             // panelColor2
             // 
             this.panelColor2.BackColor = System.Drawing.Color.White;
-            this.panelColor2.Location = new System.Drawing.Point(140, 96);
+            this.panelColor2.Location = new System.Drawing.Point(148, 99);
             this.panelColor2.Name = "panelColor2";
             this.panelColor2.Size = new System.Drawing.Size(163, 1);
             this.panelColor2.TabIndex = 11;
@@ -470,7 +353,7 @@
             // PanelColor1
             // 
             this.PanelColor1.BackColor = System.Drawing.Color.White;
-            this.PanelColor1.Location = new System.Drawing.Point(140, 54);
+            this.PanelColor1.Location = new System.Drawing.Point(148, 57);
             this.PanelColor1.Name = "PanelColor1";
             this.PanelColor1.Size = new System.Drawing.Size(163, 1);
             this.PanelColor1.TabIndex = 10;
@@ -481,7 +364,7 @@
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.White;
-            this.txtNombre.Location = new System.Drawing.Point(140, 72);
+            this.txtNombre.Location = new System.Drawing.Point(148, 75);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(0);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(167, 22);
@@ -644,21 +527,12 @@
         private System.Windows.Forms.Button btnInsertar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DateTimePicker dateFechaCumpleaños;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.TextBox txtTonodePolvo;
         private System.Windows.Forms.TextBox txtCiudad;
-        private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.TextBox txtTonodeBase;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox txtTipodeCutie;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;

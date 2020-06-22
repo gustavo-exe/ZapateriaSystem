@@ -26,6 +26,7 @@ namespace ZapateriaSystem
 
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -49,7 +50,7 @@ namespace ZapateriaSystem
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void Act_ProductoGeneral_Load(object sender, EventArgs e)
@@ -61,8 +62,8 @@ namespace ZapateriaSystem
         }
         private void CargarDatosDeLaLista()
         {
-            DataTable datos = conexion.consulta(String.Format("Select idCodigoDeBarra FROM productogeneral;"));
-            ListaDeProductoGeneral.DisplayMember = "idCodigoDeBarra";
+            DataTable datos = conexion.consulta(String.Format("Select IdProducto FROM producto;"));
+            ListaDeProductoGeneral.DisplayMember = "IdProducto";
             ListaDeProductoGeneral.DataSource = datos;
         }
         private void VaciarTextBox()
@@ -73,9 +74,40 @@ namespace ZapateriaSystem
             txtCantidad.Text = "";
             txtDescripcion.Text = "";
             txtidProveedor.Text = "";
+            txtTalla.Text = "";
+            txtColor.Text = "";
+            
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (click == 0)
+            {
+                MessageBox.Show("Debes seleccionar un item de la lista.");
+            }
+
+            else
+            {
+                //MessageBox.Show(Convert.ToString(ListaDeEmpleados.SelectedIndices.Count));
+                try
+                {
+                    productoGeneral = ObetenerValoresDeLosText();
+
+                    //Llamo al metodo de modificar(DELETE)
+                    productoGeneral.Eliminar(productoGeneral);
+
+                    CargarDatosDeLaLista();
+
+                    VaciarTextBox();
+
+                    click = 0;
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+
             btnInsertar.Visible = true;
             btnEliminar.Visible = true;
         }
@@ -112,14 +144,20 @@ namespace ZapateriaSystem
         private claseProductoGeneral ObetenerValoresDeLosText()
         {
             claseProductoGeneral productoGeneral = new claseProductoGeneral();
-            productoGeneral.IdCodigoDeBarra = Convert.ToInt32(txtIdCodigoDeBarra.Text.ToString());
+            productoGeneral.IdCodigoDeBarra = Convert.ToInt32(ListaDeProductoGeneral.Text);
+            productoGeneral.proveedor = Convert.ToInt32(txtidProveedor.Text);
             productoGeneral.nombreProducto = txtNombre.Text.ToString();
             productoGeneral.marca = txtxMarca.Text.ToString();
+
+            productoGeneral.TallaNumero = txtTalla.Text.ToString();
+            productoGeneral.Color = txtColor.Text.ToString();
+
             productoGeneral.precioUnitario = txtPrecio.Text.ToString();
             productoGeneral.cantidad = txtCantidad.Text.ToString();
             productoGeneral.descripcion = txtDescripcion.Text.ToString();
-            productoGeneral.proveedor = Convert.ToInt32(txtidProveedor.Text);
+            
 
+            
 
             return productoGeneral;
         }
@@ -129,7 +167,7 @@ namespace ZapateriaSystem
             try
             {
 
-                productoGeneral = productoGeneral.BuscarID(Convert.ToString(ListaDeProductoGeneral.Text));
+                productoGeneral = productoGeneral.BuscarID(Convert.ToInt32(ListaDeProductoGeneral.Text));
 
 
                 ValoresParaLosTextDesdeObejto(productoGeneral);
@@ -142,13 +180,16 @@ namespace ZapateriaSystem
         }
         private void ValoresParaLosTextDesdeObejto(claseProductoGeneral productoGeneral)
         {
-            txtIdCodigoDeBarra.Text = productoGeneral.IdCodigoDeBarra.ToString();
+            txtidProveedor.Text = productoGeneral.proveedor.ToString();
             txtNombre.Text = productoGeneral.nombreProducto;
             txtxMarca.Text = productoGeneral.marca;
             txtPrecio.Text = productoGeneral.precioUnitario;
             txtCantidad.Text = productoGeneral.cantidad;
             txtDescripcion.Text = productoGeneral.descripcion;
-            txtidProveedor.Text = productoGeneral.proveedor.ToString();
+            
+
+            txtColor.Text = productoGeneral.Color.ToString();
+            txtTalla.Text = productoGeneral.TallaNumero.ToString();
 
 
         }
@@ -158,6 +199,7 @@ namespace ZapateriaSystem
             click = 1;
         }
 
+        //INSERTAR
         private void btnInsertar_Click(object sender, EventArgs e)
         {
             if (click == 0)

@@ -96,6 +96,7 @@
             this.ClienteToolStripMenuItem.Size = new System.Drawing.Size(117, 25);
             this.ClienteToolStripMenuItem.Text = "cliente";
             this.ClienteToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ClienteToolStripMenuItem.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ClienteToolStripMenuItem_MouseMove);
             // 
             // actulizarClienteToolStripMenuItem1
             // 

@@ -13,11 +13,11 @@ namespace ZapateriaSystem.Producto_General
     public partial class Ins_ProductoGeneral : Form
     {   
         private int state;
-        private claseProductoGeneral productoGeneral;
+
         public Ins_ProductoGeneral()
         {
             InitializeComponent();
-            productoGeneral = new claseProductoGeneral();
+     
         }
 
 
@@ -45,41 +45,36 @@ namespace ZapateriaSystem.Producto_General
         }
 
 
-        private void Cargar_Datos()
-        {
-            txtNombre.Text = productoGeneral.nombreProducto;
-            txtMarca.Text = productoGeneral.marca;
-            txtPrecio.Text = productoGeneral.precioUnitario;
-            txtCantidad.Text = productoGeneral.cantidad;
-            txtDescripcion.Text = productoGeneral.descripcion;
-            txtidProveedor.Text = productoGeneral.descripcion.ToString()
-;            SendKeys.Send("{Tab}");
-        }
+        
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
             if (Validar() == true)
             {
-                productoGeneral.nombreProducto = txtNombre.Text;
-                productoGeneral.marca = txtMarca.Text;
-                productoGeneral.precioUnitario = txtPrecio.Text;
-                productoGeneral.cantidad = txtCantidad.Text;
-                productoGeneral.descripcion = txtDescripcion.Text;
+                claseProductoGeneral productoGeneral = new claseProductoGeneral();
+                
                 productoGeneral.proveedor = Convert.ToInt32(txtidProveedor.Text);
+
+                productoGeneral.nombreProducto = Convert.ToString(txtNombre.Text);
+                productoGeneral.marca = Convert.ToString(txtMarca.Text);
+                productoGeneral.precioUnitario = Convert.ToString((Convert.ToInt32(txtPrecio.Text)));
+                productoGeneral.cantidad = Convert.ToString((Convert.ToInt32(txtCantidad.Text)));
+                productoGeneral.descripcion = Convert.ToString(txtDescripcion.Text);
+
+                productoGeneral.TallaNumero = Convert.ToString(txtTalla.Text);
+                productoGeneral.Color = Convert.ToString(txtColor.Text);
+                
+
                 if (productoGeneral.Guardar())
                 {
-                    MessageBox.Show("Registro guardado correctamente", "Producto General", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Producto ingresado");
+                    limpiar();
                 }
                 else
                 {
-                    MessageBox.Show(string.Format("Error\n{0}", productoGeneral.Error.ToString()), "Producto General", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error al Insertar.");
                 }
-            }
-            else
-            {
-                MessageBox.Show("Se cancelo la edición");
-            }
-            limpiar();
+            }          
 
         }
 

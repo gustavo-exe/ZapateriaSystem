@@ -44,7 +44,7 @@ namespace ZapateriaSystem.Proveedor
 
         public Boolean Insertar()
         {
-            if (conexion.IUD(string.Format("INSERT INTO proveedor ( nombreEmpresa, nombreDelContrato, telefonoContacto, correo, descripcion) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');", nombreEmpresaProveedor, nombreContacto, correoProveedor, telefonoProveedor, descripcionProveedor)))
+            if (conexion.IUD(string.Format("INSERT INTO proveedor(`nombreEmpresa`,`nombreDelContrato`,`telefonoContacto`,`correo`,`descripcion`) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');", nombreEmpresaProveedor, nombreContacto, correoProveedor, telefonoProveedor, descripcionProveedor)))
             {
                 return true;
             }

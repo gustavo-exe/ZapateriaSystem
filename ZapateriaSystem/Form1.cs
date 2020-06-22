@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ZapateriaSystem.Cliente;
 using ZapateriaSystem.Empleado;
 using ZapateriaSystem.Producto_General;
+
 using ZapateriaSystem.Proveedor;
 using ZapateriaSystem.Venta;
 
@@ -167,6 +168,11 @@ namespace ZapateriaSystem
             ViewProveedor ventana = new ViewProveedor();
             ventana.MdiParent = this;
             ventana.Show();
+        }
+
+        private void ClienteToolStripMenuItem_MouseMove(object sender, MouseEventArgs e)
+        {
+          
         }
     }
 }

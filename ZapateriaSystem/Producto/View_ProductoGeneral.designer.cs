@@ -144,6 +144,7 @@
             this.vistaProductoG.RowHeadersWidth = 51;
             this.vistaProductoG.Size = new System.Drawing.Size(453, 286);
             this.vistaProductoG.TabIndex = 0;
+            this.vistaProductoG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.vistaProductoG_CellContentClick);
             // 
             // panel4
             // 

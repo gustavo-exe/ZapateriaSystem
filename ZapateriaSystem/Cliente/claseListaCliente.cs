@@ -34,9 +34,7 @@ namespace ZapateriaSystem.Cliente
                 c.PerfilInstagram = f.Field<string>(4);
                 c.CumpleanosCliente = f.Field<DateTime>(5);
                 c.CiudadCliente = f.Field<string>(6);
-                c.TonoDeBaseCliente = f.Field<string>(7);
-                c.TonodePolvoCliente = f.Field<string>(8);
-                c.TipodeCutie = f.Field<string>(9);
+               
 
                 clientes.Add(c);
             }

@@ -22,7 +22,7 @@ namespace ZapateriaSystem
         {
             //Elias
 
-            bd = "makeupbar";
+            bd = "zapateriabd";
             servidor = "127.0.0.1";
             usuario = "root";
             pass = "12345678";

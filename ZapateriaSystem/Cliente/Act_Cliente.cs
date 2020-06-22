@@ -69,17 +69,17 @@ namespace ZapateriaSystem.Cliente
         private void btnInsertar_Click(object sender, EventArgs e)
         {
             //cancelar
-            btnGuardar.Visible = true;
-            button2.Visible = true;
+            btnEliminar.Visible = true;
+            btnModificar.Visible = true;
             CambiarDeColorElPanele(panelColor3, false);
             CambiarDeColorElPanele(PanelColor1, false);
             CambiarDeColorElPanele(panelColor2, false);
             CambiarDeColorElPanele(panel9, false);
-            CambiarDeColorElPanele(panel11, false);
+            
             CambiarDeColorElPanele(panel12, false);
-            CambiarDeColorElPanele(panel13, false);
+            
             CambiarDeColorElPanele(panel8, false);
-            CambiarDeColorElPanele(panel10, false);
+            
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -139,10 +139,7 @@ namespace ZapateriaSystem.Cliente
             unCliente.CumpleanosCliente = dateFechaCumpleaños.Value;
             //unCliente.CumpleanosCliente = dateFechaCumpleaños.Value;
             unCliente.CiudadCliente = txtCiudad.Text;
-            unCliente.TonoDeBaseCliente = txtBase.Text;
-            unCliente.TonodePolvoCliente = txtPolvo.Text;
-            unCliente.TipodeCutie = txtCutie.Text;
-
+          
 
             return unCliente;
         }
@@ -171,9 +168,7 @@ namespace ZapateriaSystem.Cliente
             txtPerfil.Text = "";
             dateFechaCumpleaños.Value = DateTime.Today;
             txtCiudad.Text = "";
-            txtBase.Text = "";
-            txtPolvo.Text = "";
-            txtCutie.Text = "";
+            
 
         }
         private void CargarDatosDeLaLista()
@@ -211,9 +206,7 @@ namespace ZapateriaSystem.Cliente
             txtPerfil.Text = cliente.PerfilInstagram.ToString();
             dateFechaCumpleaños.Value = cliente.CumpleanosCliente;
             txtCiudad.Text = cliente.CiudadCliente.ToString();
-            txtBase.Text = cliente.TonoDeBaseCliente.ToString();
-            txtPolvo.Text = cliente.TonodePolvoCliente.ToString();
-            txtCutie.Text = cliente.TipodeCutie.ToString();
+           
 
         }
 
@@ -247,17 +240,18 @@ namespace ZapateriaSystem.Cliente
                 cliente.Modificar(cliente);
 
                 //Mostrar los botones y paneles a su estado natural
-                button2.Visible = false;
-                btnGuardar.Visible = false;
+               
+                btnModificar.Visible = true;
+                btnEliminar.Visible = true;
                 CambiarDeColorElPanele(panelColor3, false);
                 CambiarDeColorElPanele(PanelColor1, false);
                 CambiarDeColorElPanele(panelColor2, false);
                 CambiarDeColorElPanele(panel9, false);
-                CambiarDeColorElPanele(panel11, false);
+                
                 CambiarDeColorElPanele(panel12, false);
-                CambiarDeColorElPanele(panel13, false);
+                
                 CambiarDeColorElPanele(panel8, false);
-                CambiarDeColorElPanele(panel10, false);
+                
 
                 //Restauro el valor de click para cuando se realiza otra seleccion la evalue
                 click = 0;
@@ -288,13 +282,13 @@ namespace ZapateriaSystem.Cliente
                 CambiarDeColorElPanele(PanelColor1, true);
                 CambiarDeColorElPanele(panelColor2, true);
                 CambiarDeColorElPanele(panel9, true);
-                CambiarDeColorElPanele(panel11, true);
+                
                 CambiarDeColorElPanele(panel12, true);
-                CambiarDeColorElPanele(panel13, true);
+                
                 CambiarDeColorElPanele(panel8, true);
-                CambiarDeColorElPanele(panel10, true);
-                button2.Visible = false;
-                btnGuardar.Visible = false;
+                
+                btnModificar.Visible = false;
+                btnEliminar.Visible = false;
 
             }
 
