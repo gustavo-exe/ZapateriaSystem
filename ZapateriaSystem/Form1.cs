@@ -172,7 +172,76 @@ namespace ZapateriaSystem
 
         private void ClienteToolStripMenuItem_MouseMove(object sender, MouseEventArgs e)
         {
+            ClienteToolStripMenuItem.BackColor = Color.DarkRed;
+
           
+            CambioDeColorNegro(ProductoToolStripMenuItem);
+            CambioDeColorNegro(EmpleadoToolStripMenuItem);
+            CambioDeColorNegro(proveedorToolStripMenuItem);
+            CambioDeColorNegro(VentaoolStripMenuItem);
+
+        }
+
+        private void CambioDeColorNegro (ToolStripMenuItem tool)
+        {
+            tool.BackColor = Color.Black;
+        }
+
+        private void ClienteToolStripMenuItem_MouseDown(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void EmpleadoToolStripMenuItem_MouseMove(object sender, MouseEventArgs e)
+        {
+            EmpleadoToolStripMenuItem.BackColor = Color.DarkRed;
+
+            CambioDeColorNegro(proveedorToolStripMenuItem);
+            CambioDeColorNegro(ProductoToolStripMenuItem);
+            CambioDeColorNegro(ClienteToolStripMenuItem);
+  
+            CambioDeColorNegro(VentaoolStripMenuItem);
+
+        }
+
+        private void ProductoToolStripMenuItem_MouseMove(object sender, MouseEventArgs e)
+        {
+            ProductoToolStripMenuItem.BackColor = Color.DarkRed;
+
+            CambioDeColorNegro(proveedorToolStripMenuItem);
+            CambioDeColorNegro(EmpleadoToolStripMenuItem);
+            CambioDeColorNegro(ClienteToolStripMenuItem);
+        
+            CambioDeColorNegro(VentaoolStripMenuItem);
+
+        }
+
+        private void proveedorToolStripMenuItem_MouseMove(object sender, MouseEventArgs e)
+        {
+            proveedorToolStripMenuItem.BackColor = Color.DarkRed;
+
+            CambioDeColorNegro(ProductoToolStripMenuItem);
+            CambioDeColorNegro(EmpleadoToolStripMenuItem);
+            CambioDeColorNegro(ClienteToolStripMenuItem);
+           
+            CambioDeColorNegro(VentaoolStripMenuItem);
+
+        }
+
+        private void VentaoolStripMenuItem_MouseMove(object sender, MouseEventArgs e)
+        {
+            VentaoolStripMenuItem.BackColor = Color.DarkRed;
+
+            CambioDeColorNegro(ProductoToolStripMenuItem);
+            CambioDeColorNegro(EmpleadoToolStripMenuItem);
+            CambioDeColorNegro(ClienteToolStripMenuItem);
+            CambioDeColorNegro(proveedorToolStripMenuItem);
+           
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
