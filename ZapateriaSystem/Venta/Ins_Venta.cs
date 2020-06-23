@@ -90,40 +90,7 @@ namespace ZapateriaSystem.Venta
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (ValidarVenta() == true)
-            {
-                venta.IdCliente = (Convert.ToString(txtCliente.Text));
-                venta.IdEmpleado = (Convert.ToString(txtEmpleado.Text));
-                venta.Fecha = DateTime.Today;
-
-
-
-                if (venta.Venta())
-                {
-                    txtidventa.Text = Convert.ToString(venta.IdVenta);
-                    txtidfactura.Text = Convert.ToString(venta.IdFactura);
-
-                    MessageBox.Show("Registro guardado correctamente ","venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show(string.Format("Error\n{0}", venta.Error.ToString()), "Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-
-
-
-            }
-            else
-            {
-                MessageBox.Show("Se cancelo la edición");
-            }
-
-          
-            
-        }
+        
 
 
         private void button3_Click(object sender, EventArgs e)
@@ -156,13 +123,13 @@ namespace ZapateriaSystem.Venta
         {
             txtCliente.Text = "";
             txtEmpleado.Text = "";
-            txtidventa.Text = "";
+            
             txtidfactura.Text = "";
             txtidproducto.Text = "";
             txtprecio.Text = "";
             txtcantidad.Text = "";
             txtdescuento.Text = "";
-            Total.Text = "";
+          
         }
 
         private void limpiardetalle()
@@ -175,15 +142,18 @@ namespace ZapateriaSystem.Venta
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
+           
             if (Validar() == true)
-            {
+            { 
+                btnVender.Visible = true;
+                
                 double subventa;
                 double descuento;
                 subventa = (Convert.ToDouble(txtprecio.Text) * Convert.ToDouble(txtcantidad.Text));
                 descuento = ((Convert.ToDouble(txtdescuento.Text) / 100)*subventa);
 
 
-                venta.IdVenta = Convert.ToInt32(txtidventa.Text);
+                //venta.IdVenta = Convert.ToInt32(txtidventa.Text);
                 venta.IdFactura = Convert.ToInt32(txtidfactura.Text);
                 venta.IdProducto = Convert.ToInt32(txtidproducto.Text);
                 venta.Precio = Convert.ToDouble(txtprecio.Text);
@@ -193,10 +163,10 @@ namespace ZapateriaSystem.Venta
 
                 if (venta.Insertar())
                 {
-                    MessageBox.Show("Registro guardado correctamente", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    venta.IdVenta = Convert.ToInt32(txtidventa.Text);
-                    Total.Text = Convert.ToString(conexion.consulta(string.Format("SELECT SUM(Total) from DetalleDeVenta where idVenta = {0}",venta.IdVenta)).Rows[0][0].ToString());
-                    DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idProducto as 'Producto',precio as 'Precio',Cantidad,Descuento,Total FROM DetalleDeVenta  where idVenta = {0};", venta.IdVenta));
+                    //MessageBox.Show("Registro guardado correctamente", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //venta.IdVenta = Convert.ToInt32(txtidventa.Text);
+                    //Total.Text = Convert.ToString(conexion.consulta(string.Format("SELECT SUM(Total) from detalledeventa where idDetalleVenta = {0}",venta.i )).Rows[0][0].ToString());
+                    DataTable Datos = conexion.consulta(String.Format("SELECT idFactura as 'Numero De Factura', idProducto as 'Producto', precio as 'Precio',Cantidad,Descuento,Total FROM detalledeventa  where idFactura = {0};", venta.IdFactura));
                     dgvVenta.DataSource = Datos;
                     dgvVenta.Refresh();
                 }
@@ -239,13 +209,7 @@ namespace ZapateriaSystem.Venta
         {
             Boolean validar = true;
            
-            if (txtidventa.Text == "")
-            {
-                MessageBox.Show("Ingrese el codigo de la venta", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtidventa.Focus();
-                validar = false;
-            }
-            else if (txtidfactura.Text == "")
+           if (txtidfactura.Text == "")
             {
                 MessageBox.Show("Ingrese el codigo de la factura", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtidfactura.Focus();
@@ -304,10 +268,29 @@ namespace ZapateriaSystem.Venta
 
         private void Ins_Venta_Load(object sender, EventArgs e)
         {
-           // venta.IdVenta = Convert.ToInt32(txtidventa.Text);
+            // venta.IdVenta = Convert.ToInt32(txtidventa.Text);
             //DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idProducto as 'Producto',precio as 'Precio',Cantidad,Descuento,Total FROM DetalleDeVenta  where idFactura = {0};",venta.IdVenta));
             //dgvVenta.DataSource = Datos;
             //dgvVenta.Refresh();
+
+            venta.IdCliente = (Convert.ToString(txtCliente.Text));
+            venta.IdEmpleado = (Convert.ToString(txtEmpleado.Text));
+            venta.Fecha = DateTime.Today;
+
+
+
+            if (venta.Venta())
+            {
+
+                txtidfactura.Text = Convert.ToString(venta.IdFactura);
+
+                //MessageBox.Show("Se genero una factura.", "venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(string.Format("Error\n{0}", venta.Error.ToString()), "Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -315,10 +298,10 @@ namespace ZapateriaSystem.Venta
             if (venta.Eliminar() == true)
             {
                 MessageBox.Show("La compra ha sido cancelada", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                venta.IdVenta = Convert.ToInt32(txtidventa.Text);
+                //venta.IdVenta = Convert.ToInt32(txtidventa.Text);
                 limpiar();
                 limpiardetalle();
-                DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idProducto as 'Producto',precio as 'Precio',Cantidad,Descuento,Total FROM DetalleDeVenta  where idFactura = {0};", venta.IdVenta));
+                DataTable Datos = conexion.consulta(String.Format("SELECT idFactura as 'Numero De Factura', idProducto as 'Producto', precio as 'Precio',Cantidad,Descuento,Total FROM detalledeventa  where idFactura = {0};", venta.IdFactura));
                 dgvVenta.DataSource = Datos;
                 dgvVenta.Refresh();
             }
@@ -327,6 +310,22 @@ namespace ZapateriaSystem.Venta
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtidventa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVender_Click(object sender, EventArgs e)
+        {
+            Vender ventana = new Vender();
+            ventana.Show();
         }
     }
 }

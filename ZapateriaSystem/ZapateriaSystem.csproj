@@ -193,6 +193,12 @@
     <Compile Include="Venta\Ins_Venta.designer.cs">
       <DependentUpon>Ins_Venta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Venta\Vender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venta\Vender.Designer.cs">
+      <DependentUpon>Vender.cs</DependentUpon>
+    </Compile>
     <Compile Include="Venta\Viw_Venta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Venta\Ins_Venta.resx">
       <DependentUpon>Ins_Venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Venta\Vender.resx">
+      <DependentUpon>Vender.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Venta\Viw_Venta.resx">
       <DependentUpon>Viw_Venta.cs</DependentUpon>

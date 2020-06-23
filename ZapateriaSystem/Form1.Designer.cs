@@ -89,7 +89,7 @@
             this.VentaoolStripMenuItem});
             menuStrip1.Location = new System.Drawing.Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new System.Drawing.Size(124, 589);
+            menuStrip1.Size = new System.Drawing.Size(124, 625);
             menuStrip1.TabIndex = 6;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -260,14 +260,14 @@
             // InsertarVentaToolStripMenuItem1
             // 
             this.InsertarVentaToolStripMenuItem1.Name = "InsertarVentaToolStripMenuItem1";
-            this.InsertarVentaToolStripMenuItem1.Size = new System.Drawing.Size(168, 26);
+            this.InsertarVentaToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.InsertarVentaToolStripMenuItem1.Text = "Insertar";
             this.InsertarVentaToolStripMenuItem1.Click += new System.EventHandler(this.insertarToolStripMenuItem1_Click);
             // 
             // VisualizarVentaToolStripMenuItem
             // 
             this.VisualizarVentaToolStripMenuItem.Name = "VisualizarVentaToolStripMenuItem";
-            this.VisualizarVentaToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.VisualizarVentaToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.VisualizarVentaToolStripMenuItem.Text = "Ventas";
             this.VisualizarVentaToolStripMenuItem.Click += new System.EventHandler(this.VisualizarVentaToolStripMenuItem_Click);
             // 
@@ -296,7 +296,7 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(925, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(148, 589);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(148, 625);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
             // panel1
@@ -309,14 +309,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(145, 585);
+            this.panel1.Size = new System.Drawing.Size(145, 622);
             this.panel1.TabIndex = 12;
             // 
             // pictureBox6
             // 
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox6.Image = global::ZapateriaSystem.Properties.Resources.WhatsApp_Image_2020_06_21_at_10_51_41_PM;
-            this.pictureBox6.Location = new System.Drawing.Point(8, 475);
+            this.pictureBox6.Location = new System.Drawing.Point(8, 512);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(128, 98);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -328,7 +328,7 @@
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox5.Image = global::ZapateriaSystem.Properties.Resources.WhatsApp_Image_2020_06_21_at_10_51_41_PM__2_;
-            this.pictureBox5.Location = new System.Drawing.Point(8, 352);
+            this.pictureBox5.Location = new System.Drawing.Point(8, 385);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(128, 100);
             this.pictureBox5.TabIndex = 14;
@@ -339,7 +339,7 @@
             this.pictureBox4.BackColor = System.Drawing.Color.White;
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox4.Image = global::ZapateriaSystem.Properties.Resources.WhatsApp_Image_2020_06_21_at_10_51_40_PM;
-            this.pictureBox4.Location = new System.Drawing.Point(8, 243);
+            this.pictureBox4.Location = new System.Drawing.Point(8, 266);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(128, 85);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -352,7 +352,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = global::ZapateriaSystem.Properties.Resources.pintura;
-            this.pictureBox2.Location = new System.Drawing.Point(8, 129);
+            this.pictureBox2.Location = new System.Drawing.Point(8, 141);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(128, 98);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -390,7 +390,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1073, 589);
+            this.ClientSize = new System.Drawing.Size(1073, 625);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);

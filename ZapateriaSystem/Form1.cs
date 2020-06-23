@@ -83,6 +83,7 @@ namespace ZapateriaSystem
 
         private void insertarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            flowLayoutPanel1.Visible = false;
             Ins_Venta ventana = new Ins_Venta();
             ventana.MdiParent = this;
             ventana.Show();

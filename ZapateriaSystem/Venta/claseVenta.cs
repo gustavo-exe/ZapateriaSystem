@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace ZapateriaSystem.Venta
         private int cantidades;
         private int descuento;
         private double total;
+        private string tipoDePago;
         private MySqlException error;
 
         public claseVenta()
@@ -34,9 +36,10 @@ namespace ZapateriaSystem.Venta
             cantidades = 0;
             descuento = 0;
             total = 0.0;
+            tipoDePago = "";
             conexion = new Conexion();
         }
-        public claseVenta(string a, string b, int c, double d, int e, int f,double t)
+        public claseVenta(string a, string b, int c, double d, int e, int f,double t,string tp)
         {
             idCliente = a;
             idEmpleado = b;
@@ -46,7 +49,13 @@ namespace ZapateriaSystem.Venta
             cantidades = e;
             descuento = f;
             total = t;
+            tipoDePago = tp;
             conexion = new Conexion();
+        }
+        public string TipoDePago
+        {
+            get { return tipoDePago; }
+            set { tipoDePago = value; }
         }
 
         public double Total
@@ -167,12 +176,24 @@ namespace ZapateriaSystem.Venta
         {
             get { return error; }
         }
+        
+        public Boolean GenerarVenta()
+        {
 
+
+            MessageBox.Show(tipoDePago);
+            /*Inserta datos en la tabla de detalle de venta */
+            Boolean r = false;
+            r = conexion.IUD(String.Format("insert into venta (idCliente, idEmpleado, idFactura, Total, TipoDePago) value('{0}','{1}',{2},{3},'{4}');", idCliente, idEmpleado, idFactura, Total, tipoDePago));
+            return r;
+        
+        }
+        
         public Boolean Insertar()
         {
            
             /*Inserta datos en la tabla de detalle de venta */
-            if (conexion.IUD(string.Format("insert into DetalleDeVenta(idVenta,idFactura,idProducto,precio,Cantidad,Descuento ,Total) value('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", idVenta, idFactura, idProducto, precio, cantidades, descuento,total)))
+            if (conexion.IUD(string.Format("insert into detalledeventa(idFactura,idProducto,precio,Cantidad,Descuento ,Total) value({0},{1},{2},{3},{4},(precio * Cantidad));", idFactura, idProducto, precio, cantidades, descuento)))
             {
                 return true;
             }
@@ -183,19 +204,21 @@ namespace ZapateriaSystem.Venta
             }
         }
 
+       
+
         public Boolean Venta()
         {
             /*Inserta datos en la tabla de venta */
-            if (conexion.IUD(string.Format("insert into Venta(idCliente,idEmpleado) value('{0}','{1}')", idCliente, idEmpleado)))
-            {
-                IdVenta = Convert.ToInt32(conexion.consulta(string.Format("SELECT MAX(idVenta) from Venta")).Rows[0][0].ToString());
-            }
-            else
-            {
-                error = conexion.Error;
-            }
+            //if (conexion.IUD(string.Format("insert into Venta(idCliente,idEmpleado) value('{0}','{1}')", idCliente, idEmpleado)))
+            //{
+            //    IdVenta = Convert.ToInt32(conexion.consulta(string.Format("SELECT MAX(idVenta) from Venta")).Rows[0][0].ToString());
+            //}
+            //else
+            //{
+            //    error = conexion.Error;
+            //}
 
-            if (conexion.IUD(string.Format("insert into Factura(IdEmpleado,idCliente) value('{0}','{1}')", idEmpleado,idCliente)))
+            if (conexion.IUD(string.Format("insert into factura(IdEmpleado,idCliente) value('{0}','{1}')", idEmpleado,idCliente)))
             {
                 IdFactura = Convert.ToInt32(conexion.consulta(string.Format("SELECT MAX(IdFactura) from Factura")).Rows[0][0].ToString());
                 return true;
@@ -238,6 +261,8 @@ namespace ZapateriaSystem.Venta
             return claseventa;
 
         }
+
+
         
 
         public Boolean Eliminar()
