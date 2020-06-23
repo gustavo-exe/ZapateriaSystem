@@ -51,10 +51,10 @@
             // VerVenta
             // 
             this.VerVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.VerVenta.Location = new System.Drawing.Point(108, 39);
+            this.VerVenta.Location = new System.Drawing.Point(0, 39);
             this.VerVenta.Name = "VerVenta";
             this.VerVenta.RowHeadersWidth = 51;
-            this.VerVenta.Size = new System.Drawing.Size(453, 286);
+            this.VerVenta.Size = new System.Drawing.Size(627, 286);
             this.VerVenta.TabIndex = 0;
             this.VerVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.VerVenta_CellContentClick);
             // 

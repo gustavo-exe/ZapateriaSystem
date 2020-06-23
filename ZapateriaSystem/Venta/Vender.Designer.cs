@@ -1,6 +1,6 @@
 ﻿namespace ZapateriaSystem.Venta
 {
-    partial class Vender
+    partial class Pago
     {
         /// <summary>
         /// Required designer variable.
@@ -35,6 +35,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.lblCliente = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtCapital = new System.Windows.Forms.TextBox();
+            this.lblCapital = new System.Windows.Forms.Label();
+            this.lblVuelto = new System.Windows.Forms.Label();
+            this.txtVuelto = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblTotal
@@ -82,6 +86,8 @@
             this.listTipoDePago.Name = "listTipoDePago";
             this.listTipoDePago.Size = new System.Drawing.Size(119, 25);
             this.listTipoDePago.TabIndex = 4;
+            this.listTipoDePago.Click += new System.EventHandler(this.listTipoDePago_Click);
+            this.listTipoDePago.SelectedIndexChanged += new System.EventHandler(this.listTipoDePago_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -106,6 +112,7 @@
             this.lblCliente.Size = new System.Drawing.Size(68, 18);
             this.lblCliente.TabIndex = 6;
             this.lblCliente.Text = "label1";
+            this.lblCliente.Click += new System.EventHandler(this.lblCliente_Click);
             // 
             // label1
             // 
@@ -118,12 +125,62 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Lps.";
             // 
-            // Vender
+            // txtCapital
+            // 
+            this.txtCapital.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCapital.Location = new System.Drawing.Point(375, 110);
+            this.txtCapital.Name = "txtCapital";
+            this.txtCapital.Size = new System.Drawing.Size(100, 26);
+            this.txtCapital.TabIndex = 8;
+            this.txtCapital.Visible = false;
+            this.txtCapital.TextChanged += new System.EventHandler(this.txtCapital_TextChanged);
+            // 
+            // lblCapital
+            // 
+            this.lblCapital.AutoSize = true;
+            this.lblCapital.BackColor = System.Drawing.Color.Black;
+            this.lblCapital.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCapital.ForeColor = System.Drawing.Color.White;
+            this.lblCapital.Location = new System.Drawing.Point(304, 110);
+            this.lblCapital.Name = "lblCapital";
+            this.lblCapital.Size = new System.Drawing.Size(65, 20);
+            this.lblCapital.TabIndex = 9;
+            this.lblCapital.Text = "Capitall:";
+            this.lblCapital.Visible = false;
+            // 
+            // lblVuelto
+            // 
+            this.lblVuelto.AutoSize = true;
+            this.lblVuelto.BackColor = System.Drawing.Color.Black;
+            this.lblVuelto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVuelto.ForeColor = System.Drawing.Color.White;
+            this.lblVuelto.Location = new System.Drawing.Point(315, 145);
+            this.lblVuelto.Name = "lblVuelto";
+            this.lblVuelto.Size = new System.Drawing.Size(59, 20);
+            this.lblVuelto.TabIndex = 10;
+            this.lblVuelto.Text = "Vuelto:";
+            this.lblVuelto.Visible = false;
+            // 
+            // txtVuelto
+            // 
+            this.txtVuelto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVuelto.Location = new System.Drawing.Point(376, 142);
+            this.txtVuelto.Name = "txtVuelto";
+            this.txtVuelto.ReadOnly = true;
+            this.txtVuelto.Size = new System.Drawing.Size(100, 26);
+            this.txtVuelto.TabIndex = 11;
+            this.txtVuelto.Visible = false;
+            // 
+            // Pago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(514, 237);
+            this.Controls.Add(this.txtVuelto);
+            this.Controls.Add(this.lblVuelto);
+            this.Controls.Add(this.lblCapital);
+            this.Controls.Add(this.txtCapital);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.button1);
@@ -132,9 +189,9 @@
             this.Controls.Add(this.lblEmpleado);
             this.Controls.Add(this.lblTotal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "Vender";
+            this.Name = "Pago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Vender";
+            this.Text = "Pago";
             this.Load += new System.EventHandler(this.Vender_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -150,5 +207,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCapital;
+        private System.Windows.Forms.Label lblCapital;
+        private System.Windows.Forms.Label lblVuelto;
+        private System.Windows.Forms.TextBox txtVuelto;
     }
 }

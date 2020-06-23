@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Google.Protobuf.WellKnownTypes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -91,13 +92,20 @@ namespace ZapateriaSystem.Venta
         }
 
         
-
+        /// <summary>
+        /// Boton para minimizar
+        /// </summary>
+        
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
+        /// <summary>
+        /// Boton para maximizar y minimizar
+        /// </summary>
+    
         private void button2_Click(object sender, EventArgs e)
         {
             if (state == 0)
@@ -114,59 +122,80 @@ namespace ZapateriaSystem.Venta
             }
         }
 
+        /// <summary>
+        /// Boton para cierre de la ventana
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button5_Click(object sender, EventArgs e)
         {
             this.Close();
+            
+
         }
 
+        /// <summary>
+        /// Limpiador de los textbox del formulario insertar venta
+        /// </summary>
         private void limpiar()
         {
+            
             txtCliente.Text = "";
             txtEmpleado.Text = "";
-            
-            txtidfactura.Text = "";
             txtidproducto.Text = "";
+            txtidfactura.Text = "";
+            
             txtprecio.Text = "";
             txtcantidad.Text = "";
             txtdescuento.Text = "";
           
         }
 
-        private void limpiardetalle()
-        {
-            txtidproducto.Text = "";
-            txtprecio.Text = "";
-            txtcantidad.Text = "";
-            txtdescuento.Text = "";
-        }
+ 
 
+        /// <summary>
+        /// Se generan los detalles de la venta.
+        /// </summary>
+    
         private void btnInsertar_Click(object sender, EventArgs e)
         {
            
             if (Validar() == true)
-            { 
-                btnVender.Visible = true;
-                
-                double subventa;
-                double descuento;
-                subventa = (Convert.ToDouble(txtprecio.Text) * Convert.ToDouble(txtcantidad.Text));
-                descuento = ((Convert.ToDouble(txtdescuento.Text) / 100)*subventa);
+            {
+                btnCancelar.Visible = true;
+                btnPago.Visible = true;
+                if (txtdescuento.Text != "")
+                {
+                    ///<summary>
+                    ///Calculo del descuento
+                    /// </summary>
+                    double subventa;
+                    double descuento;
+                    subventa = (Convert.ToDouble(txtprecio.Text) * Convert.ToDouble(txtcantidad.Text));
+                    descuento = ((Convert.ToDouble(txtdescuento.Text) / 100) * subventa);
 
-
-                //venta.IdVenta = Convert.ToInt32(txtidventa.Text);
-                venta.IdFactura = Convert.ToInt32(txtidfactura.Text);
-                venta.IdProducto = Convert.ToInt32(txtidproducto.Text);
-                venta.Precio = Convert.ToDouble(txtprecio.Text);
-                venta.Cantidades = Convert.ToInt32(txtcantidad.Text);
-                venta.Descuento = Convert.ToInt32(txtdescuento.Text);
-                venta.Total = Convert.ToDouble(subventa - descuento);
+                    venta.IdFactura = Convert.ToInt32(txtidfactura.Text);
+                    venta.IdProducto = Convert.ToInt32(txtidproducto.Text);
+                    venta.Precio = Convert.ToDouble(txtprecio.Text);
+                    venta.Cantidades = Convert.ToInt32(txtcantidad.Text);
+                    venta.Descuento = Convert.ToInt32(txtdescuento.Text);
+                    venta.Total = Convert.ToDouble(subventa - descuento);
+                }
+                else
+                {
+                    //venta.IdVenta = Convert.ToInt32(txtidventa.Text);
+                    venta.IdFactura = Convert.ToInt32(txtidfactura.Text);
+                    venta.IdProducto = Convert.ToInt32(txtidproducto.Text);
+                    venta.Precio = Convert.ToDouble(txtprecio.Text);
+                    venta.Cantidades = Convert.ToInt32(txtcantidad.Text);
+                   
+                    venta.Total = Convert.ToDouble(Convert.ToInt32(txtcantidad.Text) * Convert.ToInt32(txtprecio.Text));
+                }
 
                 if (venta.Insertar())
                 {
-                    //MessageBox.Show("Registro guardado correctamente", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //venta.IdVenta = Convert.ToInt32(txtidventa.Text);
-                    //Total.Text = Convert.ToString(conexion.consulta(string.Format("SELECT SUM(Total) from detalledeventa where idDetalleVenta = {0}",venta.i )).Rows[0][0].ToString());
-                    DataTable Datos = conexion.consulta(String.Format("SELECT idFactura as 'Numero De Factura', idProducto as 'Producto', precio as 'Precio',Cantidad,Descuento,Total FROM detalledeventa  where idFactura = {0};", venta.IdFactura));
+                    
+                    DataTable Datos = conexion.consulta(String.Format("SELECT idFactura as 'NumeroDeFactura', idProducto as 'IdProducto', precio as 'Precio',Cantidad,Descuento,Total FROM detalledeventa  where idFactura = {0};", venta.IdFactura));
                     dgvVenta.DataSource = Datos;
                     dgvVenta.Refresh();
                 }
@@ -179,9 +208,14 @@ namespace ZapateriaSystem.Venta
             {
                 MessageBox.Show("Se cancelo la edición");
             }
-            limpiardetalle();
+            limpiar();
         }
 
+        /// <summary>
+        /// Validamos que los campos de empleado y cliente no esten vacios,
+        /// en este caso ya se dejan 2 por defecto.
+        /// </summary>
+        /// <returns></returns>
         private Boolean ValidarVenta()
         {
             Boolean validarVenta = true;
@@ -204,6 +238,11 @@ namespace ZapateriaSystem.Venta
 
         }
 
+
+        /// <summary>
+        /// Valido que ninguno de los campos esten vacios.
+        /// </summary>
+        /// <returns></returns>
 
         private Boolean Validar()
         {
@@ -233,12 +272,7 @@ namespace ZapateriaSystem.Venta
                 txtcantidad.Focus();
                 validar = false;
             }
-            else if (txtdescuento.Text == "")
-            {
-                MessageBox.Show("Ingrese el descuento", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtdescuento.Focus();
-                validar = false;
-            }
+           
             else
                 validar = true;
             return validar;
@@ -248,7 +282,7 @@ namespace ZapateriaSystem.Venta
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             limpiar();
-            limpiardetalle();
+           
         }
 
         private void dgvVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -265,9 +299,14 @@ namespace ZapateriaSystem.Venta
         {
 
         }
-
+        /// <summary>
+        /// Aqui genero una factura para poder realizar una venta.
+        /// Ojo: Cuando inicio el formulario
+        /// </summary>
+     
         private void Ins_Venta_Load(object sender, EventArgs e)
         {
+            
             // venta.IdVenta = Convert.ToInt32(txtidventa.Text);
             //DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idProducto as 'Producto',precio as 'Precio',Cantidad,Descuento,Total FROM DetalleDeVenta  where idFactura = {0};",venta.IdVenta));
             //dgvVenta.DataSource = Datos;
@@ -300,7 +339,7 @@ namespace ZapateriaSystem.Venta
                 MessageBox.Show("La compra ha sido cancelada", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 //venta.IdVenta = Convert.ToInt32(txtidventa.Text);
                 limpiar();
-                limpiardetalle();
+                
                 DataTable Datos = conexion.consulta(String.Format("SELECT idFactura as 'Numero De Factura', idProducto as 'Producto', precio as 'Precio',Cantidad,Descuento,Total FROM detalledeventa  where idFactura = {0};", venta.IdFactura));
                 dgvVenta.DataSource = Datos;
                 dgvVenta.Refresh();
@@ -324,8 +363,76 @@ namespace ZapateriaSystem.Venta
 
         private void btnVender_Click(object sender, EventArgs e)
         {
-            Vender ventana = new Vender();
+            ValidarVenta();
+            btnNueva.Visible = true;
+            Pago ventana = new Pago();
             ventana.Show();
+        }
+
+        private void txtidproducto_TextChanged(object sender, EventArgs e)
+        {
+            if(txtidproducto.Text != "")
+            {
+
+                try
+                {
+                    lblNombreProducto.Text = Convert.ToString(conexion.consulta(string.Format("SELECT  NombreProducto from producto Where IdProducto={0};", Convert.ToInt32(txtidproducto.Text))).Rows[0][0].ToString());
+                    txtprecio.Text = Convert.ToString(conexion.consulta(string.Format("SELECT PrecioUnitario from producto Where IdProducto={0};", Convert.ToInt32(txtidproducto.Text))).Rows[0][0].ToString());
+                }
+                catch (Exception)
+                {
+                    lblNombreProducto.Text = "No se encuentra.";
+                   
+                }
+            
+            }
+            
+            
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                txtdescuento.Visible = true;
+                panel10.Visible = true;
+            }
+            else
+            {
+                txtdescuento.Visible = false;
+                panel10.Visible = false;
+            }
+        }
+        /// <summary>
+        /// Aqui genero una factura para poder realizar una venta.
+        /// Ojo: Cuando inicio doy click en el boton nueva.
+        /// </summary>
+
+        private void btnNueva_Click(object sender, EventArgs e)
+        {
+            btnPago.Visible = false;
+            btnCancelar.Visible = false;
+        
+            
+            venta.IdCliente = (Convert.ToString(txtCliente.Text));
+            venta.IdEmpleado = (Convert.ToString(txtEmpleado.Text));
+           
+            dgvVenta.DataSource = "";
+
+
+            if (venta.Venta())
+            {
+
+                txtidfactura.Text = Convert.ToString(venta.IdFactura);
+                btnNueva.Visible = false;
+
+
+                //MessageBox.Show("Se genero una factura.", "venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(string.Format("Error\n{0}", venta.Error.ToString()), "Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -176,7 +176,11 @@ namespace ZapateriaSystem.Venta
         {
             get { return error; }
         }
-        
+        /// <summary>
+        /// Esta funcion es para generar una venta es decir el pago.
+        /// </summary>
+        /// <returns></returns>
+
         public Boolean GenerarVenta()
         {
 
@@ -188,12 +192,16 @@ namespace ZapateriaSystem.Venta
             return r;
         
         }
-        
+        /// <summary>
+        /// Insertamos en la base en la tabla detallede venta todo lo que 
+        /// viene del fomrulario de insertar venta.
+        /// </summary>
+        /// <returns></returns>
         public Boolean Insertar()
         {
            
             /*Inserta datos en la tabla de detalle de venta */
-            if (conexion.IUD(string.Format("insert into detalledeventa(idFactura,idProducto,precio,Cantidad,Descuento ,Total) value({0},{1},{2},{3},{4},(precio * Cantidad));", idFactura, idProducto, precio, cantidades, descuento)))
+            if (conexion.IUD(string.Format("insert into detalledeventa(idFactura,idProducto,precio,Cantidad,Descuento ,Total) value({0},{1},{2},{3},{4},{5});", idFactura, idProducto, precio, cantidades, descuento,total)))
             {
                 return true;
             }
@@ -205,19 +213,13 @@ namespace ZapateriaSystem.Venta
         }
 
        
-
+        /// <summary>
+        /// Esta funcion esta mal nombrda, pero funciona para
+        /// insertar una factura y generar el folio.
+        /// </summary>
+        /// <returns></returns>
         public Boolean Venta()
         {
-            /*Inserta datos en la tabla de venta */
-            //if (conexion.IUD(string.Format("insert into Venta(idCliente,idEmpleado) value('{0}','{1}')", idCliente, idEmpleado)))
-            //{
-            //    IdVenta = Convert.ToInt32(conexion.consulta(string.Format("SELECT MAX(idVenta) from Venta")).Rows[0][0].ToString());
-            //}
-            //else
-            //{
-            //    error = conexion.Error;
-            //}
-
             if (conexion.IUD(string.Format("insert into factura(IdEmpleado,idCliente) value('{0}','{1}')", idEmpleado,idCliente)))
             {
                 IdFactura = Convert.ToInt32(conexion.consulta(string.Format("SELECT MAX(IdFactura) from Factura")).Rows[0][0].ToString());
@@ -225,17 +227,11 @@ namespace ZapateriaSystem.Venta
             }
             else
             {
-                //error = conexion.Error;
                 return false;
             }
-
-
-
-            /*Inserta datos en la tabla de factura */
-
-
         }
         
+        /*
         public claseVenta BucarID(string id)
         {
             claseVenta claseventa = new claseVenta();
@@ -262,9 +258,14 @@ namespace ZapateriaSystem.Venta
 
         }
 
-
+        */
         
-
+        /// <summary>
+        /// Comprobamos que todo se logre eliminar.
+        /// 
+        /// Recordar revisar la revision de esta funcion.
+        /// </summary>
+        /// <returns></returns>
         public Boolean Eliminar()
         {
 
@@ -289,7 +290,7 @@ namespace ZapateriaSystem.Venta
 
             if (conexion.IUD(string.Format("DELETE FROM factura WHERE IdFactura='{0}'", IdFactura)))
             {
-               // MessageBox.Show("La venta ha sido cancelada", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+          
               
                 return true;
             }

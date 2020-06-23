@@ -10,10 +10,11 @@ using System.Windows.Forms;
 
 namespace ZapateriaSystem.Venta
 {
-    public partial class Vender : Form
+    public partial class Pago : Form
     {
         Conexion conexion;
-        public Vender()
+        private int click;
+        public Pago()
         {
             InitializeComponent();
             conexion = new Conexion();
@@ -35,11 +36,10 @@ namespace ZapateriaSystem.Venta
         private void button1_Click(object sender, EventArgs e)
         {
             
-            if(Validar()==true)
-            {
-                MessageBox.Show(Convert.ToString(lblCliente.Text));
 
-            
+            if (Validar()==true)
+            {
+                      
             
                 claseVenta venta = new claseVenta();
 
@@ -47,12 +47,14 @@ namespace ZapateriaSystem.Venta
 
                 venta.IdEmpleado = Convert.ToString(lblEmpleado.Text);
                 venta.IdFactura = Convert.ToInt32(lblIdFactura.Text);
-                venta.Total = Convert.ToInt32(lblTotal.Text);
+                venta.Total = Convert.ToDouble(lblTotal.Text);
                 venta.TipoDePago = Convert.ToString(listTipoDePago.Text);
                 //venta.GenerarVenta();
                 if (venta.GenerarVenta())
                 {
                     MessageBox.Show("Venta realizada.");
+                    this.Close();
+
                 }
                 else
                 {
@@ -66,10 +68,70 @@ namespace ZapateriaSystem.Venta
         private Boolean Validar()
         {
             Boolean validar = true;
-         
+            if (click == 0)
+            {
+                //MessageBox.Show(Convert.ToString(Click));
+                MessageBox.Show("Debes seleccionar un item de la lista.");
+                return false;
+            }
+
             return validar;
         }
 
+        private void lblCliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listTipoDePago_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Convert.ToString(listTipoDePago.Text) == "Contado")
+                {
+                txtCapital.Visible = true;
+                lblCapital.Visible = true;
+
+                lblVuelto.Visible = true;
+                txtVuelto.Visible = true;
+
+                }
+        }
+
+        private void txtCapital_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                        if (txtCapital.Text != "")
+                        {
+                            double capital = Convert.ToDouble(txtCapital.Text);
+                            double monto = Convert.ToDouble(lblTotal.Text);
+                            double vuelto = 0;
+
+
+                            vuelto = monto - capital;
+                            if (vuelto <= -1)
+                            {
+                                vuelto = vuelto * -1;
+                                txtVuelto.Text = Convert.ToString(vuelto);
+                            }
+                            else
+                            {
+                                txtVuelto.Text = Convert.ToString(vuelto);
+                            }
+                        }
+            }
+            catch (Exception)
+            {
+
+                txtVuelto.Text = "0";
+            }
+            
+
+        }
+
+        private void listTipoDePago_Click(object sender, EventArgs e)
+        {
+            click=1;
+        }
     }
 
 }

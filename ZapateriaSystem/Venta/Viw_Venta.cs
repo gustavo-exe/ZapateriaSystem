@@ -31,7 +31,7 @@ namespace ZapateriaSystem.Venta
         private void Viw_Venta_Load(object sender, EventArgs e)
         {
 
-            DataTable Datos = conexion.consulta(String.Format("SELECT p.idVenta as 'Numero de venta',a.idCliente as 'Cliente',a.idEmpleado as 'Empleado', SUM(p.Total) as 'Total' FROM DetalleDeVenta  as p INNER JOIN venta as a on p.idVenta = a.idVenta where p.idVenta > 0 GROUP BY p.idVenta ;"));
+            DataTable Datos = conexion.consulta(String.Format("SELECT * FROM venta;"));
             VerVenta.DataSource = Datos;
             VerVenta.Refresh();
 

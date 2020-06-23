@@ -303,7 +303,7 @@
             this.ListaDeEmpleados.Location = new System.Drawing.Point(55, 23);
             this.ListaDeEmpleados.Margin = new System.Windows.Forms.Padding(2);
             this.ListaDeEmpleados.Name = "ListaDeEmpleados";
-            this.ListaDeEmpleados.Size = new System.Drawing.Size(179, 242);
+            this.ListaDeEmpleados.Size = new System.Drawing.Size(179, 220);
             this.ListaDeEmpleados.TabIndex = 0;
             this.ListaDeEmpleados.Click += new System.EventHandler(this.ListaDeEmpleados_Click);
             this.ListaDeEmpleados.SelectedIndexChanged += new System.EventHandler(this.ListaDeEmpleados_SelectedIndexChanged);
