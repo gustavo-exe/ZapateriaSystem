@@ -17,7 +17,7 @@ namespace ZapateriaSystem.Venta
         private int idFactura;
         private string idCliente;
         private string idEmpleado;
-        private DateTime fecha;
+  
         private int idProducto;
         private double precio;
         private int cantidades;
@@ -26,11 +26,12 @@ namespace ZapateriaSystem.Venta
         private string tipoDePago;
         private MySqlException error;
 
+        //Constructor
         public claseVenta()
         {
             idCliente = "";
             idEmpleado = "";
-            fecha = DateTime.Today;
+ 
             idProducto = 0;
             precio = 0.0;
             cantidades = 0;
@@ -39,11 +40,13 @@ namespace ZapateriaSystem.Venta
             tipoDePago = "";
             conexion = new Conexion();
         }
+
+        //Inicilizador
         public claseVenta(string a, string b, int c, double d, int e, int f,double t,string tp)
         {
             idCliente = a;
             idEmpleado = b;
-            fecha = DateTime.Today;
+
             idProducto = c;
             precio = d;
             cantidades = e;
@@ -52,6 +55,7 @@ namespace ZapateriaSystem.Venta
             tipoDePago = tp;
             conexion = new Conexion();
         }
+
         public string TipoDePago
         {
             get { return tipoDePago; }
@@ -116,17 +120,6 @@ namespace ZapateriaSystem.Venta
         }
 
 
-        public DateTime Fecha
-        {
-            get
-            {
-                return fecha;
-            }
-            set
-            {
-                fecha = value;
-            }
-        }
         public int IdProducto
         {
             get
@@ -184,14 +177,14 @@ namespace ZapateriaSystem.Venta
         public Boolean GenerarVenta()
         {
 
-
-            MessageBox.Show(tipoDePago);
             /*Inserta datos en la tabla de detalle de venta */
             Boolean r = false;
             r = conexion.IUD(String.Format("insert into venta (idCliente, idEmpleado, idFactura, Total, TipoDePago) value('{0}','{1}',{2},{3},'{4}');", idCliente, idEmpleado, idFactura, Total, tipoDePago));
             return r;
         
         }
+
+
         /// <summary>
         /// Insertamos en la base en la tabla detallede venta todo lo que 
         /// viene del fomrulario de insertar venta.
@@ -201,7 +194,7 @@ namespace ZapateriaSystem.Venta
         {
            
             /*Inserta datos en la tabla de detalle de venta */
-            if (conexion.IUD(string.Format("insert into detalledeventa(idFactura,idProducto,precio,Cantidad,Descuento ,Total) value({0},{1},{2},{3},{4},{5});", idFactura, idProducto, precio, cantidades, descuento,total)))
+            if (conexion.IUD(string.Format("insert into detalledeventa(idFactura,idProducto, precio,Cantidad,Descuento ,Total) value({0},{1},{2},{3},{4},{5});", idFactura, idProducto, precio, cantidades, descuento,total)))
             {
                 return true;
             }
@@ -230,36 +223,7 @@ namespace ZapateriaSystem.Venta
                 return false;
             }
         }
-        
-        /*
-        public claseVenta BucarID(string id)
-        {
-            claseVenta claseventa = new claseVenta();
-
-
-            DataTable Tabla = conexion.consulta(string.Format("SELECT idVenta ,idFactura, idProducto, precio, Cantidad,Descuento,total FROM idDetalleDeVenta WHERE idEmpleado='{0}';", id));
-            //MessageBox.Show(Convert.ToString(id));
-            //empleado.usuario = "HHHH";
-            //MessageBox.Show(Convert.ToString(idEmpleado = Tabla.Rows[0][0].ToString()));
-            if (Tabla.Rows.Count > 0)
-            {
-
-                claseventa.idVenta = Convert.ToInt32(Tabla.Rows[0][2]);
-                claseventa.idFactura = Convert.ToInt32(Tabla.Rows[0][3]);
-                claseventa.idProducto = Convert.ToInt32(Tabla.Rows[0][4]);
-                claseventa.precio = Convert.ToDouble(Tabla.Rows[0][5]);
-                claseventa.cantidades = Convert.ToInt32(Tabla.Rows[0][6]);
-                claseventa.descuento = Convert.ToInt32(Tabla.Rows[0][3]);
-                claseventa.total = Convert.ToDouble(Tabla.Rows[0][7]);
-                //MessageBox.Show("Si hay");
-
-            }
-            return claseventa;
-
-        }
-
-        */
-        
+ 
         /// <summary>
         /// Comprobamos que todo se logre eliminar.
         /// 

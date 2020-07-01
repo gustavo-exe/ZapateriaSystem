@@ -39,6 +39,10 @@
             this.lblCapital = new System.Windows.Forms.Label();
             this.lblVuelto = new System.Windows.Forms.Label();
             this.txtVuelto = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTotal
@@ -68,7 +72,7 @@
             this.lblIdFactura.AutoSize = true;
             this.lblIdFactura.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdFactura.ForeColor = System.Drawing.Color.White;
-            this.lblIdFactura.Location = new System.Drawing.Point(12, 9);
+            this.lblIdFactura.Location = new System.Drawing.Point(44, 9);
             this.lblIdFactura.Name = "lblIdFactura";
             this.lblIdFactura.Size = new System.Drawing.Size(68, 18);
             this.lblIdFactura.TabIndex = 3;
@@ -143,9 +147,9 @@
             this.lblCapital.ForeColor = System.Drawing.Color.White;
             this.lblCapital.Location = new System.Drawing.Point(304, 110);
             this.lblCapital.Name = "lblCapital";
-            this.lblCapital.Size = new System.Drawing.Size(65, 20);
+            this.lblCapital.Size = new System.Drawing.Size(62, 20);
             this.lblCapital.TabIndex = 9;
-            this.lblCapital.Text = "Capitall:";
+            this.lblCapital.Text = "Capital:";
             this.lblCapital.Visible = false;
             // 
             // lblVuelto
@@ -171,12 +175,65 @@
             this.txtVuelto.TabIndex = 11;
             this.txtVuelto.Visible = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Black;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(23, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 20);
+            this.label2.TabIndex = 12;
+            this.label2.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Black;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkRed;
+            this.label3.Location = new System.Drawing.Point(12, 54);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 20);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Cliente";
+            this.label3.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Black;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DarkRed;
+            this.label4.Location = new System.Drawing.Point(12, 94);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(81, 20);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Empleado";
+            this.label4.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(0, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 18);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "#F:";
+            // 
             // Pago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(514, 237);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtVuelto);
             this.Controls.Add(this.lblVuelto);
             this.Controls.Add(this.lblCapital);
@@ -211,5 +268,9 @@
         private System.Windows.Forms.Label lblCapital;
         private System.Windows.Forms.Label lblVuelto;
         private System.Windows.Forms.TextBox txtVuelto;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

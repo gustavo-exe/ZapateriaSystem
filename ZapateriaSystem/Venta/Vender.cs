@@ -94,6 +94,18 @@ namespace ZapateriaSystem.Venta
                 txtVuelto.Visible = true;
 
                 }
+
+            if (Convert.ToString(listTipoDePago.Text) == "Tarjeta")
+            {
+                txtCapital.Visible = false;
+                lblCapital.Visible = false; 
+
+                lblVuelto.Visible = false;
+                txtVuelto.Visible = false;
+
+            }
+
+
         }
 
         private void txtCapital_TextChanged(object sender, EventArgs e)
