@@ -124,6 +124,8 @@ namespace ZapateriaSystem.Venta
                             {
                                 vuelto = vuelto * -1;
                                 txtVuelto.Text = Convert.ToString(vuelto);
+
+                                
                             }
                             else
                             {

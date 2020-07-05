@@ -125,7 +125,7 @@ namespace ZapateriaSystem.Venta
                 if (venta.Insertar())
                 {
                     
-                    DataTable Datos = conexion.consulta(String.Format("SELECT idFactura as 'NumeroDeFactura', idProducto as 'IdProducto', precio as 'Precio',Cantidad,Descuento,Total FROM detalledeventa  where idFactura = {0};", venta.IdFactura));
+                    DataTable Datos = conexion.consulta(String.Format("SELECT idFactura as 'NumeroDeFactura', idProducto as 'Codigo de Producto', precio as 'Precio',Cantidad,Descuento,Total FROM detalledeventa  where idFactura = {0};", venta.IdFactura));
                     dgvVenta.DataSource = Datos;
                     dgvVenta.Refresh();
                 }
@@ -232,7 +232,7 @@ namespace ZapateriaSystem.Venta
            
 
 
-            if (venta.Venta())
+            if (venta.NumeroDeFolio())
             {
 
                 txtidfactura.Text = Convert.ToString(venta.IdFactura);
@@ -253,7 +253,7 @@ namespace ZapateriaSystem.Venta
                 //venta.IdVenta = Convert.ToInt32(txtidventa.Text);
                 LimpiarTextoDeDetalle();
                 
-                DataTable Datos = conexion.consulta(String.Format("SELECT idFactura as 'Numero De Factura', idProducto as 'Producto', precio as 'Precio',Cantidad,Descuento,Total FROM detalledeventa  where idFactura = {0};", venta.IdFactura));
+                DataTable Datos = conexion.consulta(String.Format("SELECT idFactura as 'Numero De Factura', idProducto as 'Codigo de Producto', precio as 'Precio',Cantidad,Descuento,Total FROM detalledeventa  where idFactura = {0};", venta.IdFactura));
                 dgvVenta.DataSource = Datos;
                 dgvVenta.Refresh();
             }
@@ -332,7 +332,7 @@ namespace ZapateriaSystem.Venta
             dgvVenta.DataSource = "";
 
 
-            if (venta.Venta())
+            if (venta.NumeroDeFolio())
             {
 
                 txtidfactura.Text = Convert.ToString(venta.IdFactura);

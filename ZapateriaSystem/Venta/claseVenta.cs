@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -207,11 +208,11 @@ namespace ZapateriaSystem.Venta
 
        
         /// <summary>
-        /// Esta funcion esta mal nombrda, pero funciona para
+        /// Esta funcion estaba mal nombrda, pero funciona para
         /// insertar una factura y generar el folio.
         /// </summary>
         /// <returns></returns>
-        public Boolean Venta()
+        public Boolean NumeroDeFolio()
         {
             if (conexion.IUD(string.Format("insert into factura(IdEmpleado,idCliente) value('{0}','{1}')", idEmpleado,idCliente)))
             {
@@ -226,44 +227,22 @@ namespace ZapateriaSystem.Venta
         }
  
         /// <summary>
-        /// Comprobamos que todo se logre eliminar.
-        /// 
-        /// Recordar revisar la revision de esta funcion.
+        /// Eliminamos lo que se estaba generando en detalle de venta.
         /// </summary>
         /// <returns></returns>
         public Boolean Eliminar()
         {
 
-            if (conexion.IUD(string.Format("DELETE FROM DetalleDeVenta WHERE idVenta='{0}'", IdVenta)))
+            if (conexion.IUD(string.Format("DELETE FROM detalledeventa WHERE idFactura={0}", idFactura)))
             {
-                
-            }
-            else
-            {
-                error = conexion.Error;
-            }
-
-
-            if (conexion.IUD(string.Format("DELETE FROM Venta WHERE idVenta='{0}'", IdVenta)))
-            {
-
-            }
-            else
-            {
-                error = conexion.Error;
-            }
-
-            if (conexion.IUD(string.Format("DELETE FROM factura WHERE IdFactura='{0}'", IdFactura)))
-            {
-          
-              
-                return true;
+                return true;   
             }
             else
             {
                 error = conexion.Error;
                 return false;
             }
+
         }
 
     }

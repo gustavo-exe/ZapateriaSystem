@@ -198,7 +198,6 @@
             this.label3.Size = new System.Drawing.Size(58, 20);
             this.label3.TabIndex = 13;
             this.label3.Text = "Cliente";
-            this.label3.Visible = false;
             // 
             // label4
             // 
@@ -211,7 +210,6 @@
             this.label4.Size = new System.Drawing.Size(81, 20);
             this.label4.TabIndex = 14;
             this.label4.Text = "Empleado";
-            this.label4.Visible = false;
             // 
             // label5
             // 
