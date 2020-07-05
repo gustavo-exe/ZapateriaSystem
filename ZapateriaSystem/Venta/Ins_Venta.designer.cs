@@ -98,7 +98,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 603);
             this.tableLayoutPanel1.TabIndex = 2;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+ 
             // 
             // panel1
             // 
@@ -185,7 +185,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(632, 64);
             this.panel5.TabIndex = 13;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+        
             // 
             // button1
             // 
@@ -208,7 +208,7 @@
             this.label1.Size = new System.Drawing.Size(328, 36);
             this.label1.TabIndex = 12;
             this.label1.Text = "R e a l i z a r  V e n t a";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+  
             // 
             // txtidfactura
             // 
@@ -222,7 +222,7 @@
             this.txtidfactura.Size = new System.Drawing.Size(64, 26);
             this.txtidfactura.TabIndex = 20;
             this.txtidfactura.Tag = "";
-            this.txtidfactura.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+  
             // 
             // label5
             // 
@@ -236,7 +236,7 @@
             this.label5.TabIndex = 21;
             this.label5.Text = "Factura";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+
             // 
             // panel6
             // 
@@ -319,7 +319,7 @@
             this.dgvVenta.Name = "dgvVenta";
             this.dgvVenta.Size = new System.Drawing.Size(603, 190);
             this.dgvVenta.TabIndex = 2;
-            this.dgvVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVenta_CellContentClick);
+
             // 
             // groupBox2
             // 
@@ -345,7 +345,7 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Detalles de Venta";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+
             // 
             // lblNombreProducto
             // 
@@ -399,7 +399,7 @@
             this.txtdescuento.TabIndex = 3;
             this.txtdescuento.Tag = "";
             this.txtdescuento.Visible = false;
-            this.txtdescuento.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+
             // 
             // btnInsertar
             // 
@@ -425,7 +425,7 @@
             this.panel10.Size = new System.Drawing.Size(163, 1);
             this.panel10.TabIndex = 31;
             this.panel10.Visible = false;
-            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
+ 
             // 
             // label8
             // 
@@ -438,7 +438,7 @@
             this.label8.Size = new System.Drawing.Size(72, 18);
             this.label8.TabIndex = 30;
             this.label8.Text = "Cantidad";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+
             // 
             // txtcantidad
             // 
@@ -452,7 +452,7 @@
             this.txtcantidad.Size = new System.Drawing.Size(167, 19);
             this.txtcantidad.TabIndex = 2;
             this.txtcantidad.Tag = "";
-            this.txtcantidad.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+
             // 
             // panel11
             // 
@@ -461,7 +461,7 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(163, 1);
             this.panel11.TabIndex = 28;
-            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
+
             // 
             // label9
             // 
@@ -474,7 +474,7 @@
             this.label9.Size = new System.Drawing.Size(54, 18);
             this.label9.TabIndex = 27;
             this.label9.Text = "Precio";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+
             // 
             // txtprecio
             // 
@@ -489,7 +489,7 @@
             this.txtprecio.Size = new System.Drawing.Size(167, 19);
             this.txtprecio.TabIndex = 1;
             this.txtprecio.Tag = "";
-            this.txtprecio.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+
             // 
             // panel12
             // 
@@ -498,7 +498,7 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(163, 1);
             this.panel12.TabIndex = 25;
-            this.panel12.Paint += new System.Windows.Forms.PaintEventHandler(this.panel12_Paint);
+
             // 
             // label6
             // 

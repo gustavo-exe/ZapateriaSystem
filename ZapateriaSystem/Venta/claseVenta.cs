@@ -215,6 +215,7 @@ namespace ZapateriaSystem.Venta
         {
             if (conexion.IUD(string.Format("insert into factura(IdEmpleado,idCliente) value('{0}','{1}')", idEmpleado,idCliente)))
             {
+                //Al asignar este valor id de factira tambien debe de ser de escritura
                 IdFactura = Convert.ToInt32(conexion.consulta(string.Format("SELECT MAX(IdFactura) from Factura")).Rows[0][0].ToString());
                 return true;
             }

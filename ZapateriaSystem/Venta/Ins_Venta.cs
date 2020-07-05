@@ -24,74 +24,6 @@ namespace ZapateriaSystem.Venta
 
             conexion = new Conexion();
         }
-
-
-     
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel8_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel10_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel11_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel12_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         
         /// <summary>
         /// Boton para minimizar
@@ -286,20 +218,6 @@ namespace ZapateriaSystem.Venta
 
         }
 
-        private void dgvVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         /// <summary>
         /// Aqui genero una factura para poder realizar una venta.
         /// Ojo: Cuando inicio el formulario
@@ -312,7 +230,6 @@ namespace ZapateriaSystem.Venta
             venta.IdCliente = (Convert.ToString(txtCliente.Text));
             venta.IdEmpleado = (Convert.ToString(txtEmpleado.Text));
            
-
 
 
             if (venta.Venta())
@@ -342,20 +259,9 @@ namespace ZapateriaSystem.Venta
             }
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
 
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtidventa_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        /// <summary>
+        /// Boton que manda la confirmacion del pago
 
         private void btnVender_Click(object sender, EventArgs e)
         {
@@ -364,6 +270,11 @@ namespace ZapateriaSystem.Venta
             Pago ventana = new Pago();
             ventana.Show();
         }
+
+        /// <summary>
+        /// Cada vez que hay un cambio o se ingresa el id del producto
+        /// el label del nombre se actulizara
+        /// </summary>
 
         private void txtidproducto_TextChanged(object sender, EventArgs e)
         {
@@ -385,6 +296,9 @@ namespace ZapateriaSystem.Venta
             
             
         }
+        /// <summary>
+        /// Habilitacion del txtBox de descuento
+        /// </summary>
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -399,6 +313,8 @@ namespace ZapateriaSystem.Venta
                 panel10.Visible = false;
             }
         }
+
+
         /// <summary>
         /// Aqui genero una factura para poder realizar una venta.
         /// Ojo: Cuando inicio doy click en el boton nueva.
