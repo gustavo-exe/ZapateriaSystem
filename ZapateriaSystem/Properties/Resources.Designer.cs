@@ -73,6 +73,16 @@ namespace ZapateriaSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cancelar {
+            get {
+                object obj = ResourceManager.GetObject("Cancelar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pintura {
             get {
                 object obj = ResourceManager.GetObject("pintura", resourceCulture);
@@ -83,39 +93,9 @@ namespace ZapateriaSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap WhatsApp_Image_2020_06_21_at_10_51_19_PM {
+        internal static System.Drawing.Bitmap White_noun_Login {
             get {
-                object obj = ResourceManager.GetObject("WhatsApp Image 2020-06-21 at 10.51.19 PM", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap WhatsApp_Image_2020_06_21_at_10_51_40_PM {
-            get {
-                object obj = ResourceManager.GetObject("WhatsApp Image 2020-06-21 at 10.51.40 PM", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap WhatsApp_Image_2020_06_21_at_10_51_41_PM {
-            get {
-                object obj = ResourceManager.GetObject("WhatsApp Image 2020-06-21 at 10.51.41 PM", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap WhatsApp_Image_2020_06_21_at_10_51_41_PM__2_ {
-            get {
-                object obj = ResourceManager.GetObject("WhatsApp Image 2020-06-21 at 10.51.41 PM (2)", resourceCulture);
+                object obj = ResourceManager.GetObject("White_noun_Login", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

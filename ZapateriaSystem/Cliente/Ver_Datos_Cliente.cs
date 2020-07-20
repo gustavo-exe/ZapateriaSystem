@@ -94,5 +94,12 @@ namespace ZapateriaSystem.Cliente
         {
 
         }
+
+        private void btnBuscarProducto_Click(object sender, EventArgs e)
+        {
+            DataTable Datos = conexion.consulta(String.Format("SELECT IdCliente as 'Identidad', Nombre, Correo, Telefono, PerfilInstagram, Cumpleaños, Ciudad FROM cliente where Nombre = '{0}';",txtNombreCliente.Text));
+            dvDatosCliente.DataSource = Datos;
+            dvDatosCliente.Refresh();
+        }
     }
 }

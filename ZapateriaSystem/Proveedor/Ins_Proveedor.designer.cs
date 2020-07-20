@@ -56,15 +56,12 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.btnReturn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -78,7 +75,6 @@
             this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel5, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel6, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -175,7 +171,7 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Location = new System.Drawing.Point(353, 214);
+            this.panel10.Location = new System.Drawing.Point(353, 211);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(163, 1);
             this.panel10.TabIndex = 36;
@@ -186,7 +182,7 @@
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCorreo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ForeColor = System.Drawing.Color.White;
-            this.txtCorreo.Location = new System.Drawing.Point(353, 190);
+            this.txtCorreo.Location = new System.Drawing.Point(353, 186);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(0);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(167, 22);
@@ -199,7 +195,7 @@
             this.label7.BackColor = System.Drawing.Color.Black;
             this.label7.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(145, 190);
+            this.label7.Location = new System.Drawing.Point(125, 190);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 22);
             this.label7.TabIndex = 34;
@@ -211,7 +207,7 @@
             this.txtTelefonoContacto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefonoContacto.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoContacto.ForeColor = System.Drawing.Color.White;
-            this.txtTelefonoContacto.Location = new System.Drawing.Point(353, 153);
+            this.txtTelefonoContacto.Location = new System.Drawing.Point(353, 137);
             this.txtTelefonoContacto.Margin = new System.Windows.Forms.Padding(0);
             this.txtTelefonoContacto.Name = "txtTelefonoContacto";
             this.txtTelefonoContacto.Size = new System.Drawing.Size(167, 22);
@@ -222,7 +218,7 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Location = new System.Drawing.Point(353, 178);
+            this.panel9.Location = new System.Drawing.Point(353, 162);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(163, 1);
             this.panel9.TabIndex = 32;
@@ -233,11 +229,11 @@
             this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(145, 153);
+            this.label3.Location = new System.Drawing.Point(125, 141);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(196, 22);
+            this.label3.Size = new System.Drawing.Size(192, 22);
             this.label3.TabIndex = 31;
-            this.label3.Text = "Teléfono del Contacto";
+            this.label3.Text = "Teléfono del contacto";
             // 
             // label6
             // 
@@ -245,16 +241,16 @@
             this.label6.BackColor = System.Drawing.Color.Black;
             this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(145, 111);
+            this.label6.Location = new System.Drawing.Point(125, 92);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(190, 22);
+            this.label6.Size = new System.Drawing.Size(186, 22);
             this.label6.TabIndex = 21;
-            this.label6.Text = "Nombre del Contacto";
+            this.label6.Text = "Nombre del contacto";
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(353, 87);
+            this.panel8.Location = new System.Drawing.Point(353, 62);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(163, 1);
             this.panel8.TabIndex = 20;
@@ -265,7 +261,7 @@
             this.txtNombreEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreEmpresa.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreEmpresa.ForeColor = System.Drawing.Color.White;
-            this.txtNombreEmpresa.Location = new System.Drawing.Point(353, 63);
+            this.txtNombreEmpresa.Location = new System.Drawing.Point(353, 37);
             this.txtNombreEmpresa.Margin = new System.Windows.Forms.Padding(0);
             this.txtNombreEmpresa.Name = "txtNombreEmpresa";
             this.txtNombreEmpresa.Size = new System.Drawing.Size(167, 22);
@@ -278,11 +274,11 @@
             this.label5.BackColor = System.Drawing.Color.Black;
             this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(145, 63);
+            this.label5.Location = new System.Drawing.Point(125, 41);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(187, 22);
+            this.label5.Size = new System.Drawing.Size(204, 22);
             this.label5.TabIndex = 18;
-            this.label5.Text = "Nombre de Empresa";
+            this.label5.Text = "Nombre de la empresa";
             // 
             // label4
             // 
@@ -290,7 +286,7 @@
             this.label4.BackColor = System.Drawing.Color.Black;
             this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(145, 231);
+            this.label4.Location = new System.Drawing.Point(125, 233);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(111, 22);
             this.label4.TabIndex = 17;
@@ -299,7 +295,7 @@
             // panelColor3
             // 
             this.panelColor3.BackColor = System.Drawing.Color.White;
-            this.panelColor3.Location = new System.Drawing.Point(353, 256);
+            this.panelColor3.Location = new System.Drawing.Point(353, 254);
             this.panelColor3.Name = "panelColor3";
             this.panelColor3.Size = new System.Drawing.Size(163, 1);
             this.panelColor3.TabIndex = 14;
@@ -310,7 +306,7 @@
             this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescripcion.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.ForeColor = System.Drawing.Color.White;
-            this.txtDescripcion.Location = new System.Drawing.Point(353, 231);
+            this.txtDescripcion.Location = new System.Drawing.Point(353, 229);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(0);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(167, 22);
@@ -320,7 +316,7 @@
             // panelColor2
             // 
             this.panelColor2.BackColor = System.Drawing.Color.White;
-            this.panelColor2.Location = new System.Drawing.Point(353, 136);
+            this.panelColor2.Location = new System.Drawing.Point(353, 113);
             this.panelColor2.Name = "panelColor2";
             this.panelColor2.Size = new System.Drawing.Size(163, 1);
             this.panelColor2.TabIndex = 11;
@@ -331,7 +327,7 @@
             this.txtNombreContacto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreContacto.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreContacto.ForeColor = System.Drawing.Color.White;
-            this.txtNombreContacto.Location = new System.Drawing.Point(353, 111);
+            this.txtNombreContacto.Location = new System.Drawing.Point(353, 88);
             this.txtNombreContacto.Margin = new System.Windows.Forms.Padding(0);
             this.txtNombreContacto.Name = "txtNombreContacto";
             this.txtNombreContacto.Size = new System.Drawing.Size(167, 22);
@@ -354,7 +350,7 @@
             this.btnInsertar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsertar.ForeColor = System.Drawing.Color.White;
             this.btnInsertar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnInsertar.Location = new System.Drawing.Point(195, 38);
+            this.btnInsertar.Location = new System.Drawing.Point(243, 25);
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(0);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(195, 34);
@@ -402,32 +398,6 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "I n s e r t a r  P r o v e e d o r";
             // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.btnReturn);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(3, 33);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(33, 36);
-            this.panel6.TabIndex = 14;
-            // 
-            // btnReturn
-            // 
-            this.btnReturn.BackColor = System.Drawing.Color.Black;
-            this.btnReturn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnReturn.FlatAppearance.BorderSize = 0;
-            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturn.ForeColor = System.Drawing.Color.White;
-            this.btnReturn.Location = new System.Drawing.Point(0, 0);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(0);
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(36, 36);
-            this.btnReturn.TabIndex = 12;
-            this.btnReturn.Text = "←";
-            this.btnReturn.UseVisualStyleBackColor = false;
-
-            // 
             // Ins_Proveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -448,7 +418,6 @@
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -470,8 +439,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox txtNombreEmpresa;

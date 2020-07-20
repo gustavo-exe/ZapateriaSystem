@@ -43,6 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTotal
@@ -55,13 +56,14 @@
             this.lblTotal.Size = new System.Drawing.Size(143, 40);
             this.lblTotal.TabIndex = 0;
             this.lblTotal.Text = "label1";
+            this.lblTotal.Click += new System.EventHandler(this.lblTotal_Click);
             // 
             // lblEmpleado
             // 
             this.lblEmpleado.AutoSize = true;
             this.lblEmpleado.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmpleado.ForeColor = System.Drawing.Color.White;
-            this.lblEmpleado.Location = new System.Drawing.Point(91, 94);
+            this.lblEmpleado.Location = new System.Drawing.Point(107, 94);
             this.lblEmpleado.Name = "lblEmpleado";
             this.lblEmpleado.Size = new System.Drawing.Size(68, 18);
             this.lblEmpleado.TabIndex = 2;
@@ -86,7 +88,7 @@
             this.listTipoDePago.Items.AddRange(new object[] {
             "Tarjeta",
             "Contado"});
-            this.listTipoDePago.Location = new System.Drawing.Point(94, 152);
+            this.listTipoDePago.Location = new System.Drawing.Point(135, 137);
             this.listTipoDePago.Name = "listTipoDePago";
             this.listTipoDePago.Size = new System.Drawing.Size(119, 25);
             this.listTipoDePago.TabIndex = 4;
@@ -98,11 +100,11 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(375, 195);
+            this.button1.Location = new System.Drawing.Point(360, 195);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 30);
             this.button1.TabIndex = 5;
-            this.button1.Text = "Generar Venta";
+            this.button1.Text = "Vender";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -111,7 +113,7 @@
             this.lblCliente.AutoSize = true;
             this.lblCliente.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCliente.ForeColor = System.Drawing.Color.White;
-            this.lblCliente.Location = new System.Drawing.Point(91, 56);
+            this.lblCliente.Location = new System.Drawing.Point(107, 54);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(68, 18);
             this.lblCliente.TabIndex = 6;
@@ -136,6 +138,7 @@
             this.txtCapital.Name = "txtCapital";
             this.txtCapital.Size = new System.Drawing.Size(100, 26);
             this.txtCapital.TabIndex = 8;
+            this.txtCapital.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCapital.Visible = false;
             this.txtCapital.TextChanged += new System.EventHandler(this.txtCapital_TextChanged);
             // 
@@ -145,11 +148,11 @@
             this.lblCapital.BackColor = System.Drawing.Color.Black;
             this.lblCapital.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCapital.ForeColor = System.Drawing.Color.White;
-            this.lblCapital.Location = new System.Drawing.Point(304, 110);
+            this.lblCapital.Location = new System.Drawing.Point(298, 111);
             this.lblCapital.Name = "lblCapital";
-            this.lblCapital.Size = new System.Drawing.Size(62, 20);
+            this.lblCapital.Size = new System.Drawing.Size(75, 20);
             this.lblCapital.TabIndex = 9;
-            this.lblCapital.Text = "Capital:";
+            this.lblCapital.Text = "Recibido:";
             this.lblCapital.Visible = false;
             // 
             // lblVuelto
@@ -173,6 +176,7 @@
             this.txtVuelto.ReadOnly = true;
             this.txtVuelto.Size = new System.Drawing.Size(100, 26);
             this.txtVuelto.TabIndex = 11;
+            this.txtVuelto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtVuelto.Visible = false;
             // 
             // label2
@@ -192,24 +196,24 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkRed;
+            this.label3.ForeColor = System.Drawing.Color.Red;
             this.label3.Location = new System.Drawing.Point(12, 54);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 20);
+            this.label3.Size = new System.Drawing.Size(66, 20);
             this.label3.TabIndex = 13;
-            this.label3.Text = "Cliente";
+            this.label3.Text = "Cliente: ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Black;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkRed;
+            this.label4.ForeColor = System.Drawing.Color.Red;
             this.label4.Location = new System.Drawing.Point(12, 94);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 20);
+            this.label4.Size = new System.Drawing.Size(89, 20);
             this.label4.TabIndex = 14;
-            this.label4.Text = "Empleado";
+            this.label4.Text = "Empleado: ";
             // 
             // label5
             // 
@@ -222,12 +226,25 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "#F:";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Black;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(12, 142);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(105, 20);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Tipo de pago:";
+            // 
             // Pago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(514, 237);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -262,13 +279,14 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCapital;
         private System.Windows.Forms.Label lblCapital;
         private System.Windows.Forms.Label lblVuelto;
-        private System.Windows.Forms.TextBox txtVuelto;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        public System.Windows.Forms.TextBox txtCapital;
+        public System.Windows.Forms.TextBox txtVuelto;
     }
 }

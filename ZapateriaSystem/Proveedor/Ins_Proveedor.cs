@@ -120,24 +120,22 @@ namespace ZapateriaSystem.Proveedor
                 
                 if (proveedor.Insertar())
                 {
-                    MessageBox.Show("Registro guardado correctamente", "Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Registro guardado correctamente", "Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                    limpiar();
                 }
                 else
                 {
                     MessageBox.Show(string.Format("Error\n{0}", proveedor.Error.ToString()), "Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
-            {
-                MessageBox.Show("Se cancelo el proceso");
-            }
+            
 
-            limpiar();
+           
         }
 
         private void limpiar()
         {
-            //txtProveedor.Text = "";
+  
             txtNombreEmpresa.Text = "";
             txtNombreContacto.Text = "";
             txtTelefonoContacto.Text = "";
@@ -149,12 +147,7 @@ namespace ZapateriaSystem.Proveedor
         private Boolean Validar()
         {
             Boolean validar = true;
-            /*if (txtProveedor.Text == "")
-            {
-                MessageBox.Show("Escriba el id del proveedor", "Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtProveedor.Focus();
-                validar = false;
-            }*/
+           
             if (txtNombreEmpresa.Text == "")
             {
                 MessageBox.Show("Escriba el nombre de la empresa", "Proveedor", MessageBoxButtons.OK, MessageBoxIcon.Warning);

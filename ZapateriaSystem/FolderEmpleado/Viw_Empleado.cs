@@ -62,5 +62,12 @@ namespace ZapateriaSystem.Empleado
         {
 
         }
+
+        private void btnBuscarProducto_Click(object sender, EventArgs e)
+        {
+            DataTable Datos = conexion.consulta(String.Format("SELECT * FROM empleado where Usuario ='{0}';",txtUsuario.Text));
+            dataGridView1.DataSource = Datos;
+            dataGridView1.Refresh();
+        }
     }
 }

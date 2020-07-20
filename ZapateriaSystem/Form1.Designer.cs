@@ -166,7 +166,7 @@
             this.ProductoToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.ProductoToolStripMenuItem.Name = "ProductoToolStripMenuItem";
             this.ProductoToolStripMenuItem.Size = new System.Drawing.Size(117, 25);
-            this.ProductoToolStripMenuItem.Text = "producto";
+            this.ProductoToolStripMenuItem.Text = "zapato";
             this.ProductoToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ProductoToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.ProductoToolStripMenuItem.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ProductoToolStripMenuItem_MouseMove);
@@ -174,21 +174,21 @@
             // insertarProductoToolStripMenuItem1
             // 
             this.insertarProductoToolStripMenuItem1.Name = "insertarProductoToolStripMenuItem1";
-            this.insertarProductoToolStripMenuItem1.Size = new System.Drawing.Size(179, 26);
+            this.insertarProductoToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.insertarProductoToolStripMenuItem1.Text = "insertar";
             this.insertarProductoToolStripMenuItem1.Click += new System.EventHandler(this.insertarProductoToolStripMenuItem1_Click);
             // 
             // actulizarProductoToolStripMenuItem1
             // 
             this.actulizarProductoToolStripMenuItem1.Name = "actulizarProductoToolStripMenuItem1";
-            this.actulizarProductoToolStripMenuItem1.Size = new System.Drawing.Size(179, 26);
+            this.actulizarProductoToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.actulizarProductoToolStripMenuItem1.Text = "actulizar";
             this.actulizarProductoToolStripMenuItem1.Click += new System.EventHandler(this.actulizarProductoToolStripMenuItem1_Click);
             // 
             // listaProductoToolStripMenuItem
             // 
             this.listaProductoToolStripMenuItem.Name = "listaProductoToolStripMenuItem";
-            this.listaProductoToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.listaProductoToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.listaProductoToolStripMenuItem.Text = "lista";
             this.listaProductoToolStripMenuItem.Click += new System.EventHandler(this.listaProductoToolStripMenuItem_Click);
             // 
@@ -246,14 +246,14 @@
             // InsertarVentaToolStripMenuItem1
             // 
             this.InsertarVentaToolStripMenuItem1.Name = "InsertarVentaToolStripMenuItem1";
-            this.InsertarVentaToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
+            this.InsertarVentaToolStripMenuItem1.Size = new System.Drawing.Size(168, 26);
             this.InsertarVentaToolStripMenuItem1.Text = "insertar";
             this.InsertarVentaToolStripMenuItem1.Click += new System.EventHandler(this.insertarToolStripMenuItem1_Click);
             // 
             // VisualizarVentaToolStripMenuItem
             // 
             this.VisualizarVentaToolStripMenuItem.Name = "VisualizarVentaToolStripMenuItem";
-            this.VisualizarVentaToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.VisualizarVentaToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
             this.VisualizarVentaToolStripMenuItem.Text = "ventas";
             this.VisualizarVentaToolStripMenuItem.Click += new System.EventHandler(this.VisualizarVentaToolStripMenuItem_Click);
             // 

@@ -87,11 +87,14 @@ namespace ZapateriaSystem.Proveedor
 
         private void ValoresParaLosTextDesdeObejto(claseProveedor proveedor)
         {
+        
+            txtNombreEmpresa.Text = proveedor.NombreEmpresaProveedor;
+            txtNombreConstacto.Text = proveedor.NombreContacto;
+            txtTelefonoContacto.Text = proveedor.TelefonoProveedor;
             txtCorreo.Text = proveedor.CorreoProveedor;
             txtDescripcion.Text = proveedor.DescripcionProveedor;
-            txtNombreConstacto.Text = proveedor.NombreContacto;
-            txtNombreEmpresa.Text = proveedor.NombreEmpresaProveedor;
-            txtTelefonoContacto.Text = proveedor.TelefonoProveedor;
+
+
         }
 
         private void ListaDeProveedores_SelectedIndexChanged(object sender, EventArgs e)
@@ -120,7 +123,7 @@ namespace ZapateriaSystem.Proveedor
             //Cargue este dato porque es lo unico que me provee el id
             //y lo ncesito para actulizar.
             //Lo cargque desde aqui porque no tengo un textbox
-            unProveedor.IdProveedor = Convert.ToInt32 (ListaDeProveedores.Text);
+            unProveedor.IdProveedor = Convert.ToInt32(ListaDeProveedores.Text);
             ///////////////////////////////////////////////////////////////////
          
             unProveedor.CorreoProveedor = txtCorreo.Text;

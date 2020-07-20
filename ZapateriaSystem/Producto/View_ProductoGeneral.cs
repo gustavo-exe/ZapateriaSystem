@@ -60,5 +60,13 @@ namespace ZapateriaSystem.Producto_General
         {
 
         }
+
+        private void btnBuscarProducto_Click(object sender, EventArgs e)
+        {
+            
+            DataTable Datos = conexion.consulta(String.Format("SELECT * FROM producto where NombreProducto='{0}';", txtNombreProducto.Text));
+            vistaProductoG.DataSource = Datos;
+            vistaProductoG.Refresh();
+        }
     }
 }

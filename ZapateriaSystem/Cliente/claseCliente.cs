@@ -122,7 +122,7 @@ namespace ZapateriaSystem.Cliente
             string id;
 
             id = cliente.idCliente;
-            if (conexion.IUD(string.Format("DELETE FROM makeupbar.cliente WHERE IdCliente='{0}';", cliente.idCliente)))
+            if (conexion.IUD(string.Format("DELETE FROM cliente WHERE IdCliente='{0}';", cliente.idCliente)))
             {
                 MessageBox.Show("Se elimino el cliente: " + Convert.ToString(id));
             }

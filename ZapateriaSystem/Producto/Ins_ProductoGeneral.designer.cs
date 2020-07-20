@@ -98,7 +98,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 4;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // panel1
             // 
@@ -191,7 +190,7 @@
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.White;
-            this.panel14.Location = new System.Drawing.Point(445, 142);
+            this.panel14.Location = new System.Drawing.Point(440, 188);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(163, 1);
             this.panel14.TabIndex = 66;
@@ -199,7 +198,7 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.White;
-            this.panel13.Location = new System.Drawing.Point(445, 103);
+            this.panel13.Location = new System.Drawing.Point(444, 121);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(163, 1);
             this.panel13.TabIndex = 70;
@@ -210,7 +209,7 @@
             this.txtColor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtColor.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtColor.ForeColor = System.Drawing.Color.White;
-            this.txtColor.Location = new System.Drawing.Point(445, 121);
+            this.txtColor.Location = new System.Drawing.Point(440, 167);
             this.txtColor.Margin = new System.Windows.Forms.Padding(0);
             this.txtColor.Name = "txtColor";
             this.txtColor.Size = new System.Drawing.Size(167, 22);
@@ -223,7 +222,7 @@
             this.label8.BackColor = System.Drawing.Color.Black;
             this.label8.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(330, 121);
+            this.label8.Location = new System.Drawing.Point(323, 167);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(61, 22);
             this.label8.TabIndex = 69;
@@ -235,7 +234,7 @@
             this.txtTalla.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTalla.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTalla.ForeColor = System.Drawing.Color.White;
-            this.txtTalla.Location = new System.Drawing.Point(445, 82);
+            this.txtTalla.Location = new System.Drawing.Point(444, 100);
             this.txtTalla.Margin = new System.Windows.Forms.Padding(0);
             this.txtTalla.Name = "txtTalla";
             this.txtTalla.Size = new System.Drawing.Size(167, 22);
@@ -248,7 +247,7 @@
             this.label9.BackColor = System.Drawing.Color.Black;
             this.label9.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(325, 82);
+            this.label9.Location = new System.Drawing.Point(319, 100);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(125, 22);
             this.label9.TabIndex = 68;
@@ -257,7 +256,7 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Location = new System.Drawing.Point(150, 69);
+            this.panel10.Location = new System.Drawing.Point(121, 66);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(163, 1);
             this.panel10.TabIndex = 65;
@@ -268,7 +267,7 @@
             this.txtidProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtidProveedor.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtidProveedor.ForeColor = System.Drawing.Color.White;
-            this.txtidProveedor.Location = new System.Drawing.Point(146, 48);
+            this.txtidProveedor.Location = new System.Drawing.Point(117, 45);
             this.txtidProveedor.Margin = new System.Windows.Forms.Padding(0);
             this.txtidProveedor.Name = "txtidProveedor";
             this.txtidProveedor.Size = new System.Drawing.Size(167, 22);
@@ -281,7 +280,7 @@
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(23, 48);
+            this.label2.Location = new System.Drawing.Point(9, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 22);
             this.label2.TabIndex = 63;
@@ -290,7 +289,7 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Location = new System.Drawing.Point(450, 191);
+            this.panel9.Location = new System.Drawing.Point(444, 245);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(163, 1);
             this.panel9.TabIndex = 62;
@@ -298,7 +297,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(143, 188);
+            this.panel4.Location = new System.Drawing.Point(121, 245);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(163, 1);
             this.panel4.TabIndex = 61;
@@ -306,7 +305,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(143, 146);
+            this.panel6.Location = new System.Drawing.Point(121, 188);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(163, 1);
             this.panel6.TabIndex = 61;
@@ -314,7 +313,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(143, 103);
+            this.panel7.Location = new System.Drawing.Point(117, 121);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(163, 1);
             this.panel7.TabIndex = 61;
@@ -323,7 +322,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.panel8);
-            this.panel5.Location = new System.Drawing.Point(139, 229);
+            this.panel5.Location = new System.Drawing.Point(440, 66);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(163, 1);
             this.panel5.TabIndex = 61;
@@ -342,7 +341,7 @@
             this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescripcion.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.ForeColor = System.Drawing.Color.White;
-            this.txtDescripcion.Location = new System.Drawing.Point(446, 170);
+            this.txtDescripcion.Location = new System.Drawing.Point(440, 224);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(0);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(167, 22);
@@ -355,7 +354,7 @@
             this.label7.BackColor = System.Drawing.Color.Black;
             this.label7.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(330, 170);
+            this.label7.Location = new System.Drawing.Point(323, 224);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(116, 22);
             this.label7.TabIndex = 26;
@@ -367,7 +366,7 @@
             this.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCantidad.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.ForeColor = System.Drawing.Color.White;
-            this.txtCantidad.Location = new System.Drawing.Point(139, 208);
+            this.txtCantidad.Location = new System.Drawing.Point(440, 45);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(0);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(167, 22);
@@ -380,7 +379,7 @@
             this.label6.BackColor = System.Drawing.Color.Black;
             this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(23, 210);
+            this.label6.Location = new System.Drawing.Point(319, 45);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 22);
             this.label6.TabIndex = 24;
@@ -392,7 +391,7 @@
             this.txtPrecio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPrecio.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecio.ForeColor = System.Drawing.Color.White;
-            this.txtPrecio.Location = new System.Drawing.Point(143, 170);
+            this.txtPrecio.Location = new System.Drawing.Point(121, 227);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(0);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(167, 22);
@@ -405,7 +404,7 @@
             this.label5.BackColor = System.Drawing.Color.Black;
             this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(23, 170);
+            this.label5.Location = new System.Drawing.Point(9, 227);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 22);
             this.label5.TabIndex = 22;
@@ -417,7 +416,7 @@
             this.txtMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMarca.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMarca.ForeColor = System.Drawing.Color.White;
-            this.txtMarca.Location = new System.Drawing.Point(143, 125);
+            this.txtMarca.Location = new System.Drawing.Point(121, 167);
             this.txtMarca.Margin = new System.Windows.Forms.Padding(0);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(167, 22);
@@ -430,7 +429,7 @@
             this.label4.BackColor = System.Drawing.Color.Black;
             this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(23, 125);
+            this.label4.Location = new System.Drawing.Point(13, 167);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 22);
             this.label4.TabIndex = 20;
@@ -442,7 +441,7 @@
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.White;
-            this.txtNombre.Location = new System.Drawing.Point(143, 82);
+            this.txtNombre.Location = new System.Drawing.Point(117, 100);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(0);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(167, 22);
@@ -455,7 +454,7 @@
             this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(23, 82);
+            this.label3.Location = new System.Drawing.Point(9, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 22);
             this.label3.TabIndex = 18;
@@ -468,7 +467,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(619, 55);
             this.panel3.TabIndex = 15;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // btnInsertar
             // 
@@ -501,11 +499,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(215, 0);
+            this.label1.Location = new System.Drawing.Point(279, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(401, 36);
+            this.label1.Size = new System.Drawing.Size(337, 36);
             this.label1.TabIndex = 0;
-            this.label1.Text = "I n s e r t a r  P r o d u c t o ";
+            this.label1.Text = "I n s e r t a r Z a p a t o";
             // 
             // flowLayoutPanel2
             // 

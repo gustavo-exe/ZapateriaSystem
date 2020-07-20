@@ -19,8 +19,6 @@ namespace ZapateriaSystem.Producto_General
             InitializeComponent();
      
         }
-
-
         
 
         private void button1_Click(object sender, EventArgs e)
@@ -83,38 +81,44 @@ namespace ZapateriaSystem.Producto_General
             Boolean validar = true;
             if (txtNombre.Text == "")
             {
-                MessageBox.Show("Escriba el nombre del Producto General", "Producto General", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Escriba el nombre.", "Producto ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtNombre.Focus();
                 validar = false;
             }
             else if (txtMarca.Text == "")
             {
-                MessageBox.Show("Escriba la marca del Producto General", "Producto General", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Escriba la marca.", "Producto ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtMarca.Focus();
                 validar = false;
             }
             else if (txtPrecio.Text == "")
             {
-                MessageBox.Show("Escriba el precio del Producto General", "Producto General", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Escriba el precio.", "Producto ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtPrecio.Focus();
                 validar = false;
             }
             else if (txtCantidad.Text == "")
             {
-                MessageBox.Show("Escriba la cantidad de Producto General", "Producto General", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Escriba la cantidad.", "Producto ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtCantidad.Focus();
                 validar = false;
             }
-            else if (txtDescripcion.Text == "")
+            else if (txtTalla.Text == "")
             {
-                MessageBox.Show("Escriba la descripcion del Producto General", "Producto General", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtDescripcion.Focus();
+                MessageBox.Show("Escriba la talla. ", "Producto ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtTalla.Focus();
                 validar = false;
             }
             else if (txtidProveedor.Text == "")
             {
-                MessageBox.Show("Escriba el codigo del Proveedor", "Producto General", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Escriba el codigo.", "Producto ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtidProveedor.Focus();
+                validar = false;
+            }
+            else if (txtColor.Text == "")
+            {
+                MessageBox.Show("Escriba el color.", "Producto ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtColor.Focus();
                 validar = false;
             }
             else
@@ -125,6 +129,8 @@ namespace ZapateriaSystem.Producto_General
 
         private void limpiar()
         {
+            txtColor.Text = "";
+            txtTalla.Text = "";
             txtNombre.Text = "";
             txtMarca.Text = "";
             txtPrecio.Text = "";
@@ -133,20 +139,13 @@ namespace ZapateriaSystem.Producto_General
             txtidProveedor.Text = "";
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void btnClose_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+    
     }
 }
 

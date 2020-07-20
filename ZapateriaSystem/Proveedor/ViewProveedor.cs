@@ -65,5 +65,12 @@ namespace ZapateriaSystem.Proveedor
         {
 
         }
+
+        private void btnBuscarProducto_Click(object sender, EventArgs e)
+        {
+            DataTable Datos = conexion.consulta(String.Format("SELECT IdProveedor, nombreEmpresa as 'Nombre de la empresa', nombreDelContrato as 'Nombre del contacto', telefonoContacto as 'Telefono del contacto', correo as 'Correo', descripcion as 'Descripción' FROM proveedor where nombreDelContrato = '{0}';",txtNombreProveedor.Text));
+            verproveedor.DataSource = Datos;
+            verproveedor.Refresh();
+        }
     }
 }

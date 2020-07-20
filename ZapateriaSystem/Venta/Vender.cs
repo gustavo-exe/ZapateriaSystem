@@ -20,6 +20,8 @@ namespace ZapateriaSystem.Venta
             conexion = new Conexion();
             claseVenta venta = new claseVenta();
 
+
+
         }
 
         private void Vender_Load(object sender, EventArgs e)
@@ -50,9 +52,39 @@ namespace ZapateriaSystem.Venta
                 venta.Total = Convert.ToDouble(lblTotal.Text);
                 venta.TipoDePago = Convert.ToString(listTipoDePago.Text);
                 //venta.GenerarVenta();
+
                 if (venta.GenerarVenta())
                 {
+                    //Instancio mi ventana padre
+                    Ins_Venta m = Owner as Ins_Venta;
+
+                    //Habilitar botones de padre
+                    m.btnFacturar.Enabled = true;
+                    m.btnNueva.Enabled = true;
+
+                    //Compartir datos al formulario de punto de venta
+
+                    string send;
+                    
+                   
+                    if (txtCapital.Text != "" && txtVuelto.Text != "")
+                    {
+                        //Capital
+                        send = txtCapital.Text;
+                         m.lblRecibdo.Text = send+"L";
+
+                        //Vuelto
+                        send = txtVuelto.Text;
+                        m.lblDevuelto.Text = send + "L";
+                    }
+                    
+                    //Tipo de pago
+                    send = listTipoDePago.Text;
+                    m.lblTipoDePago.Text = send ;
+
+
                     MessageBox.Show("Venta realizada.");
+
                     this.Close();
 
                 }
@@ -145,6 +177,11 @@ namespace ZapateriaSystem.Venta
         private void listTipoDePago_Click(object sender, EventArgs e)
         {
             click=1;
+        }
+
+        private void lblTotal_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

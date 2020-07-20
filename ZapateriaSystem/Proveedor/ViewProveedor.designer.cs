@@ -41,6 +41,10 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtNombreProveedor = new System.Windows.Forms.TextBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -130,6 +134,10 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.txtNombreProveedor);
+            this.panel2.Controls.Add(this.panel9);
+            this.panel2.Controls.Add(this.btnBuscarProducto);
             this.panel2.Controls.Add(this.verproveedor);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(93, 85);
@@ -193,6 +201,56 @@
             this.panel6.Size = new System.Drawing.Size(84, 46);
             this.panel6.TabIndex = 14;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Black;
+            this.label6.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(9, 17);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(228, 18);
+            this.label6.TabIndex = 37;
+            this.label6.Text = "Nombre del Proveedor: ";
+            // 
+            // txtNombreProveedor
+            // 
+            this.txtNombreProveedor.BackColor = System.Drawing.Color.Black;
+            this.txtNombreProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombreProveedor.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreProveedor.ForeColor = System.Drawing.Color.White;
+            this.txtNombreProveedor.Location = new System.Drawing.Point(240, 11);
+            this.txtNombreProveedor.Margin = new System.Windows.Forms.Padding(0);
+            this.txtNombreProveedor.Name = "txtNombreProveedor";
+            this.txtNombreProveedor.Size = new System.Drawing.Size(167, 19);
+            this.txtNombreProveedor.TabIndex = 35;
+            this.txtNombreProveedor.Tag = "";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.Location = new System.Drawing.Point(240, 34);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(163, 1);
+            this.panel9.TabIndex = 36;
+            // 
+            // btnBuscarProducto
+            // 
+            this.btnBuscarProducto.BackColor = System.Drawing.Color.DarkRed;
+            this.btnBuscarProducto.FlatAppearance.BorderSize = 0;
+            this.btnBuscarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarProducto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarProducto.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarProducto.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnBuscarProducto.Location = new System.Drawing.Point(418, 3);
+            this.btnBuscarProducto.Margin = new System.Windows.Forms.Padding(0);
+            this.btnBuscarProducto.Name = "btnBuscarProducto";
+            this.btnBuscarProducto.Size = new System.Drawing.Size(102, 34);
+            this.btnBuscarProducto.TabIndex = 34;
+            this.btnBuscarProducto.Text = "Buscar";
+            this.btnBuscarProducto.UseVisualStyleBackColor = false;
+            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
+            // 
             // ViewProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,6 +267,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.verproveedor)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -231,5 +290,9 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtNombreProveedor;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button btnBuscarProducto;
     }
 }

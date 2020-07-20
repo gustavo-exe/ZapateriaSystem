@@ -88,17 +88,14 @@ namespace ZapateriaSystem.Cliente
                 if (cliente.Guardar())
                 {
                     MessageBox.Show("Registro guardado correctamente", "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    limpiar();
                 }
                 else
                 {
                     MessageBox.Show(string.Format("Error\n{0}", cliente.Error.ToString()), "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
-            {
-                MessageBox.Show("Se cancelo la edición");
-            }
-                limpiar();
+            
         }
 
 
